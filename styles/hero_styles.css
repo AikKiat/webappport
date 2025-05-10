@@ -1,0 +1,90 @@
+.hero, .main{
+    /* border: 1px solid #fd1d1d; */
+    overflow-x: hidden;
+} 
+
+/*Hero Styling */
+
+/* .hero{
+    background-color: #131313;
+    padding: 5rem 0rem;
+    height:100%;
+} */
+
+.hero__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height:20rem;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero__heading{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    color: #fff;
+}
+
+
+/*Autotyping Container Styling */
+.static__text{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400px;
+}
+
+.dynamic__texts{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.autotyping__wrapper{
+    display: inline-flex;
+}
+
+.dynamic__texts li{
+    list-style: none;
+    font-size:40px;
+    font-weight: 500px;
+    text-align: left;
+}
+
+.dynamic__texts li span{
+    position: relative;
+    text-shadow: 
+    0 0 0.1rem #fff,
+    0 0 0.3rem #10c0e8; /*offset x, offsety, blur radius, colour */
+}
+
+.dynamic__texts li span .hero__caret{
+    display: inline-block;
+    width: 0.5rem;
+    height: 100%;
+    border-radius: 0%;
+    background: #10c0e8;
+    animation: blinkingInsertCursor 1s linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes typingAnim{
+    100%{ /*at keyrame of 100% of the animation length, basically meaning at the last timestamp of anim */
+        left: 100%;
+        margin: 0;
+    }
+}
+
+@keyframes flashingCursor{
+    0%{
+        border: 0.25rem solid #10c0e8;
+    }
+    100%{
+        border: 0.25rem solid #131313;
+    }
+}
