@@ -7,6 +7,10 @@
 }
 
 .search__section .navigation__button{
+    position: relative;
+    background:transparent;
+    background-color: transparent;
+    border: none;
     width: 10rem;
     font-size: 2rem;
     background: inherit;
@@ -18,7 +22,56 @@
     0 0 1rem #10c0e8; /*offset x, offsety, blur radius, colour */
 
     position: relative;
+
+    border: 0.2rem solid #131313;
+    overflow: hidden;
+
+    animation: clickGlowEffect 3s linear forwards;
+    animation-play-state: paused;
+    opacity: 0;
     
+}
+
+.search__section .navigation__button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    border-radius: 2.5rem;
+    background: radial-gradient(circle, #10c0e8a1, transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.search__section .navigation__button:hover{
+    background-color:  #10c0e8a1;
+    color: black;
+    box-shadow: 0 0 1rem #10c0e8, 0 0 4rem #10c0e8, 0 0 10rem #10c0e8;
+}
+
+.search__section .navigation__button:hover::after{
+    opacity: 1;
+}
+
+@keyframes clickGlowEffect{
+    0%{
+
+    }
+    10%{
+        box-shadow: 0 0 0.5rem #10c0e8, 0 0 2rem #10c0e8, 0 0 5rem #10c0e8;
+    }
+    33%{
+        box-shadow: 0 0 0.5rem #10c0e8, 0 0 1rem #10c0e8, 0 0 7rem #10c0e8;
+    }
+    60%{
+        box-shadow: 0 0 0.5rem #10c0e8, 0 0 1rem #10c0e8, 0 0 7rem #10c0e8;
+    }
+    66%{
+        box-shadow: 0 0 0.5rem #10c0e8, 0 0 2rem #10c0e8, 0 0 5rem #10c0e8;  
+    }
+    100%{
+        animation-play-state: paused;
+    }
 }
 
 .search__section .line__outer{
@@ -45,6 +98,16 @@
     width: 40%;
 }
 
+.search__section .line__inner:hover{
+    background: #131313;
+    transition: all 0.5s ease;
+}
+
+.search__section .line__outer:hover{
+    background:#131313;
+    transition: all 0.5s ease;
+    
+}
 @keyframes flashingUnderline {
     0%{
         box-shadow: 0 0 0.9rem 0.2rem var(--clr-outer);
@@ -63,18 +126,18 @@
     100%{
         box-shadow: 0 0 0.9rem 0.2rem var(--clr-outer);
     }
-    
 }
 
-.section__container{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.search__section{
+    animation: removeFromView 1s linear forwards;
+    animation-play-state: paused;
 }
 
-.sections{
-    display: flex;
-    flex-direction: row;
-    width: 300%;
-    box-sizing: border-box;
+@keyframes removeFromView{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }

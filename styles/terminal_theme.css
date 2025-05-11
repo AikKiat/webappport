@@ -1,13 +1,21 @@
-/* #monitor {
-	margin: 3vmin auto;
-	padding: 5.5vmin;
-	width: min-content;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: #3f3933;
-	border-radius: 0.5rem;
-} */
+html, body, #monitor, #screen, #crt {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+
+.static__mask{
+	position:absolute;
+	height: 100%;
+	width: 100%;
+	background: #131313;
+	opacity: 0.3;
+}
+
+
 #monitor {
 	box-shadow: 0.6px 90px 110px -60px #1071e8;
     /* screen glow */
@@ -29,19 +37,7 @@
 	background-size: 100% 8px;
 	z-index: 2;
 	pointer-events: none;
-	animation: fadeIn 2s;
 }
-
-/* 
-#screen {
-	position: relative;
-	border: 30px solid transparent;
-	border-image-source: url(/img/bezel_gray.png);
-	border-image-slice: 30 fill;
-	border-image-outset: 0;
-	overflow: hidden;
-} */
-/* The screen itself + border */
 #crt,
 pre {
 	font-family: "VT323", monospace;
@@ -49,7 +45,7 @@ pre {
 #crt {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	min-width: 80ch; /* This makes 80 monospace characters fit on the screen */
 	height: calc(80ch * 0.8);
 	font-size: max(
@@ -63,8 +59,6 @@ pre {
 		 #1071e8 0%,
 		black 90%
 	);
-	animation: on 2s linear;
-	transition: all 0.5s;
 	overflow: hidden;
 }
 
@@ -113,27 +107,3 @@ pre {
 		bottom: -20%;
 	}
 }
-
-
-
-/* .terminal {
-	position: relative;
-	height: 100%;
-	padding: 2rem;
-	overflow-y: auto;
-	overflow-x: hidden;
-	word-break: break-word;
-	text-transform: uppercase;
-	animation: textShadow 4s infinite;
-} */
-
-/* .terminal {
-	color: var(--color);
-	text-shadow: 0 0 5px #c8c8c8;
-} */
-/* 
-::selection {
-	background: var(--color);
-	color: var(--bg);
-	text-shadow: none;
-} */

@@ -1,57 +1,59 @@
 
 
-//Control the About, Skills and Projects Sections
-sections = [document.querySelector('.sections .about__section'), document.querySelector('.sections .project__section'), document.querySelector('.sections .skills__section')];
+// //Control the About, Skills and Projects Sections
+// sections = [document.querySelector('.sections .about__section'), document.querySelector('.sections .project__section'), document.querySelector('.sections .skills__section')];
 
-for(let i = 0; i < sections.length; i++)
-{
-    const rect = sections[i].getBoundingClientRect();
-    // console.log(rect);
-    // console.log(rect.left);
-}
-const translateAmount = 33.333;
-let translate = 0;
-let currentPage = "";
+// for(let i = 0; i < sections.length; i++)
+// {
+//     const rect = sections[i].getBoundingClientRect();
+//     // console.log(rect);
+//     // console.log(rect.left);
+// }
+// const translateAmount = 33.333;
+// let translate = 0;
+// let currentPage = "";
 
 
-function checkInViewport(rect){
-    // console.log(rect.left);
-    if(rect.left == 0){
-        return true;
-    }
-    return false;
-}
-function slide(sectionName)
-{
-    for(let i = 0; i < sections.length; i++)
-    {
-        const rect = sections[i].getBoundingClientRect();
-        // console.log(document.innerWidth);
-        if(checkInViewport(rect)){
-            // console.log(sections[i].id)
-            currentPage = sections[i].id;
-        }
-    }
+// function checkInViewport(rect){
+//     // console.log(rect.left);
+//     if(rect.left == 0){
+//         return true;
+//     }
+//     return false;
+// }
+// function slide(sectionName)
+// {
+//     for(let i = 0; i < sections.length; i++)
+//     {
+//         const rect = sections[i].getBoundingClientRect();
+//         // console.log(document.innerWidth);
+//         if(checkInViewport(rect)){
+//             // console.log(sections[i].id)
+//             currentPage = sections[i].id;
+//         }
+//     }
 
-    if (sectionName === "about")
-    {
-        console.log(currentPage);
-        translate = (parseInt(currentPage) - 1) * translateAmount;
-        console.log("Go to About page", "translate" + translate);
-    }
-    if(sectionName === "projects"){
-        console.log(currentPage);
-        translate = (parseInt(currentPage) - 2) * translateAmount;
-        console.log("Go to projects page", "translate" + translate);
-    }
-    if(sectionName === "skills"){
-        console.log(currentPage);
-        translate = (parseInt(currentPage) - 3) * translateAmount;
-        console.log("Go to skills page", "translate" + translate);
-    }
+//     if (sectionName === "about")
+//     {
+//         console.log(currentPage);
+//         translate = (parseInt(currentPage) - 1) * translateAmount;
+//         console.log("Go to About page", "translate" + translate);
+//     }
+//     if(sectionName === "projects"){
+//         console.log(currentPage);
+//         translate = (parseInt(currentPage) - 2) * translateAmount;
+//         console.log("Go to projects page", "translate" + translate);
+//     }
+//     if(sectionName === "skills"){
+//         console.log(currentPage);
+//         translate = (parseInt(currentPage) - 3) * translateAmount;
+//         console.log("Go to skills page", "translate" + translate);
+//     }
 
-    document.querySelector('.sections').style.transform = `translateX(${translate}%)`;
-}
+//     document.querySelector('.sections').style.transform = `translateX(${translate}%)`;
+// }
+
+/*man
 
 var delayMiliseconds2 = 400;
 var delayMiliseconds3 = 200;
@@ -89,6 +91,8 @@ function spinSpans(spans, j){
 
 
 var animationStepDelays = 2000;
+
+*/
 
 
 function createHeroDescriptions(autotypeTextUl,dynamicTexts){
@@ -169,11 +173,54 @@ displayDynamicTexts(textSpanCount);
 
 
 //About me section
-const aboutMetextCaret = "<span class='about__me__caret' id='caret'></span>"; //caretElement
-const introText = document.getElementById("intro__text");
-// var introString = "";
-var i = 0;
-var text = "Hello! I am Thng Aik Kiat, currently a year 2 student at SUTD. I like to spend time coding projects in python, having picked it up since 2017. Apart from Python I have also acquired a great many other languages under my belt, such as Java, Javascript, CSS, HTML. All part and parcel of my eventful journey learning ever more, in the field of computer science";
-var typingSpeed = 50;
+// const aboutMetextCaret = "<span class='about__me__caret' id='caret'></span>"; //caretElement
+// const introText = document.getElementById("intro__text");
+// // var introString = "";
+// var i = 0;
+// var text = "Hello! I am Thng Aik Kiat, currently a year 2 student at SUTD. I like to spend time coding projects in python, having picked it up since 2017. Apart from Python I have also acquired a great many other languages under my belt, such as Java, Javascript, CSS, HTML. All part and parcel of my eventful journey learning ever more, in the field of computer science";
+// var typingSpeed = 50;
 
-typewriter(introText, text, aboutMetextCaret, typingSpeed, "", 0, false);
+// typewriter(introText, text, aboutMetextCaret, typingSpeed, "", 0, false);
+
+
+
+//pressing Start button, spawn the rest of the page
+
+//get refernces to navigatio  button class
+const navigationButtons = document.querySelectorAll(".navigation__button");
+
+function start(){
+    navigationButtons.forEach(element => {
+        element.style.opacity = 1;
+        const currentAnimState = window.getComputedStyle(element).animationPlayState;
+        console.log(currentAnimState);
+        if(currentAnimState == "paused")
+        {
+            element.style.animationPlayState = "running";
+        }
+    });
+    console.log("hello");
+}
+
+function slide(sectionName){
+
+    const searchSection = document.querySelector(".search__section");
+    const heroContainer = document.querySelector(".hero");
+    heroContainer.style.animationPlayState = "running";
+    searchSection.style.animationPlayState = "running";
+
+    //show sections based off sectionName
+    if(sectionName == "about"){
+        const aboutSection = document.querySelector(".about__section");
+        aboutSection.style.animationPlayState = "running";
+    }
+    else if(sectionName == "projects"){
+        const aboutSection = document.querySelector(".projects__section");
+        aboutSection.style.animationPlayState = "running";
+    }
+
+    else if(sectionName == "skills"){
+        const aboutSection = document.querySelector(".skills__section");
+        aboutSection.style.animationPlayState = "running";
+    }
+}

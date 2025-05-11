@@ -1,15 +1,111 @@
-.hero, .main{
-    /* border: 1px solid #fd1d1d; */
-    overflow-x: hidden;
-} 
+:root{
+    --percentage-gradient-transparent2:98%;
+    --percentage-gradient-transparent:98%;
+    --percentage-gradient-colour:3%;
+    --percentage-gradient-colour2:3%;
+}
 
-/*Hero Styling */
+.hero{
+    z-index: 1;
+    position: relative;
+    animation: transformUp 1s linear forwards;
+    animation-play-state:paused;
 
-/* .hero{
-    background-color: #131313;
-    padding: 5rem 0rem;
-    height:100%;
-} */
+}
+
+@property --percentage-gradient-transparent2 {
+  syntax: "<percentage>";
+  initial-value: 98%;
+  inherits: false;
+}
+@property --percentage-gradient-transparent {
+  syntax: "<percentage>";
+  initial-value: 98%;
+  inherits: false;
+}
+@property --percentage-gradient-colour {
+  syntax: "<percentage>";
+  initial-value: 5%;
+  inherits: false;
+}
+@property --percentage-gradient-colour2 {
+  syntax: "<percentage>";
+  initial-value: 5%;
+  inherits: false;
+}
+
+
+.hero .background, .background::before{
+    position: absolute;
+    display:block;
+    content: "";
+    background: linear-gradient(transparent, transparent) padding-box, 
+    linear-gradient(90deg, transparent var(--percentage-gradient-transparent), #10c0e88f var(--percentage-gradient-colour)) border-box,
+    linear-gradient(180deg, transparent var(--percentage-gradient-transparent2),  #10c0e88f var(--percentage-gradient-colour2)) border-box,
+    linear-gradient(270deg, transparent  var(--percentage-gradient-transparent2),  #10c0e88f var(--percentage-gradient-colour2)) border-box,
+    linear-gradient(0deg, transparent var(--percentage-gradient-transparent),  #10c0e88f var(--percentage-gradient-colour)) border-box;
+    width: 60%;
+    height: 100%;
+    left: 20%;
+    bottom: 0%;
+    animation: adjustPercentageGradient 5s linear infinite;
+}
+
+.background::before{
+    content: "";
+    position: relative;
+    width: 100%;
+    left: 0%;
+    filter: blur(0.3rem);
+    background: linear-gradient(transparent, transparent) padding-box, 
+    linear-gradient(90deg, transparent var(--percentage-gradient-transparent), #10c0e8 var(--percentage-gradient-colour)) border-box,
+    linear-gradient(180deg, transparent var(--percentage-gradient-transparent2),  #10c0e8 var(--percentage-gradient-colour2)) border-box,
+    linear-gradient(270deg, transparent var(--percentage-gradient-transparent2) , #10c0e8 var(--percentage-gradient-colour2)) border-box,
+    linear-gradient(0deg, transparent var(--percentage-gradient-transparent), #10c0e8 var(--percentage-gradient-colour)) border-box;
+
+    
+}
+
+@keyframes adjustPercentageGradient{
+    0%{
+        --percentage-gradient-transparent2:98%;
+        --percentage-gradient-transparent:98%;
+        --percentage-gradient-colour:5%;
+        --percentage-gradient-colour2:5%;
+    }
+    50%{
+        --percentage-gradient-transparent2:98%;
+        --percentage-gradient-transparent:97%;
+        --percentage-gradient-colour:4%;
+        --percentage-gradient-colour2:3%;
+    }
+    100%{
+        --percentage-gradient-transparent2:98%;
+        --percentage-gradient-transparent:98%;
+        --percentage-gradient-colour:5%;
+        --percentage-gradient-colour2:5%;
+    }
+}
+
+
+@keyframes transformUp{
+    0%{
+        /* transform: rotateX(40deg); */
+        opacity: 1;
+    }
+
+    100%{
+        /* transform: rotateX(0deg); */
+        opacity: 0;
+    }
+}
+
+@keyframes shrinkBox{
+    100%{
+        transform: scale(0.5);
+    }
+}
+
 
 .hero__container{
     display: flex;
@@ -17,7 +113,7 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-    height:20rem;
+    height:100%;
     width: 100%;
     text-align: center;
     padding: 30px;

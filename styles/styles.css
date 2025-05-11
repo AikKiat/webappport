@@ -9,6 +9,10 @@
     padding: 0;
     font-family: "VT323", Courier;
     scroll-behavior:smooth;
+
+    text-shadow: 
+    0 0 0.1rem #fff,
+    0 0 0.3rem #10c0e8; /*offset x, offsety, blur radius, colour */
 }
 
 :root{
@@ -32,244 +36,135 @@
 }
 
 .inner__container .input__field{
+    width: 100%;
     height: 4rem;
     display: flex;
+    flex-direction: row;
     margin-left: 1.5rem;
     color: #fff;
     font-size: 3rem;
-    size: 5rem;
+    justify-content: center;
 }
 
-input[type=text], textarea{
+.start__button{
     position: relative;
-    top: 10%;
-    background:transparent;
-    display: inline-flex;
-    height: 2rem;
-    font-family: 'VT323', Courier;
-    color: #fff;
-    border: none;
-    font-size: inherit;
-    caret-color: #10c0e8;
-    outline: 0;
-}
-
-input[type=text]::placeholder{
-    color: #fff;
+    background: transparent;
+    background-color: transparent;
+    width: 8rem;
+    height: 60%;
+    border: 0.2rem solid #131313;
+    border-radius: 0.25rem;
     font-size: 2rem;
-    animation: flashingPlaceholder 1s linear infinite;
+    color: white;
+    overflow: hidden;
 }
 
-@keyframes flashingPlaceholder{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-
-/*projects section */
-.project__section{
+.start__button::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #131313;
+    height: 100%;
+    border-radius: 2.5rem;
+    background: radial-gradient(circle, #10c0e8a1, transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 0;
 }
 
-
-.about__section #bounding__border{
-    display: block;
-    background:linear-gradient(90deg, #131313, #131313) padding-box,
-    linear-gradient(0deg, #131313, grey) border-box;
-    border-radius: 1rem;
-    border-style: solid;
-    border-width: 0.5rem;
-    border-color: transparent;
-    width: 80%;
-    height: 50%;
-    position: relative;
-    top: -20%;
+.start__button:hover{
+    z-index: 1;
+    background-color: #10c0e8;
+    color: black;
+    box-shadow: 0 0 1rem #10c0e8, 0 0 4rem #10c0e8, 0 0 10rem #10c0e8;
 }
 
-.about__section #bounding__border #intro__text .about__me__caret{
-    display: inline-block;
-    height: 1rem;
-    width: 0.2rem;
-    border-radius: 0%;
-    background: #10c0e8;
-    border: 0.25rem solid #10c0e8;
-    animation: blinkingInsertCursor 1s linear infinite;
-    animation-play-state: paused;
+.start__button:hover::before{
+    opacity: 1;
 }
 
-@keyframes blinkingInsertCursor{
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
 
 .about__section{
-    background: linear-gradient(45deg, #57003f 0%,#f57453 100%); 
-    font-family: Ubuntu;
-    width: 100%;
+    z-index:-1;
+    opacity: 0;
+
+    position:absolute;
+    left: 15%;
+    top: 30%;
+    height: fit-content;
+    width: 70%;
+    opacity: 1;
+    background: #13131332;
+    border: 0.3rem dashed #131313;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: #131313;
+    flex-direction: row;
+    padding: 2rem;
     color: #fff;
-}
 
-.about__section #intro__text{
-    padding: 1rem;
-    color: #fff;
-    font-size: 1rem;
-}
+    box-shadow: 0 0 0.9rem 0.2rem #009cff, inset 0 0 0.9rem 0.2rem #009cff;
 
-.about__section #about__me{
-    padding: 1rem;
-    text-align: center;
-    color: #fff;
-    font-size: 2rem;
-}
-
-.about__section #bounding__border span{
-    display: inline-block;
-    animation: rotate .5s linear forwards;
+    animation: showSection 1s linear forwards;
     animation-play-state: paused;
 }
-.about__section #bounding__border .man{
-    opacity: 0;
-}
-@keyframes rotate{
-    from{
-        -webkit-transform: rotateZ(0deg);
-    }
-    to{
-        -webkit-transform: rotateZ(180deg);
-    }
+
+.about__section #content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    width: fit-content;
+    position: relative;
+    bottom: 10%;
+    right: 0%;
+    padding: 1rem;
+    font-size: 1.5rem;
+
 }
 
+#content #android{
+    width: 2rem;
+    height: 2rem;
+}
+
+.projects__section{
+    z-index: -1;
+    opacity: 0;
+
+    position: absolute;
+    top: 50%;
+    height: 40%;
+    width: 100%;
+    opacity: 0;
+    background-color: inherit;
+    animation: showSection 1s linear forwards;
+    animation-play-state: paused;
+}
 
 .skills__section{
+    z-index: -1;
+    opacity: 0;
+
+    position: absolute;
+    top: 50%;
+    height: 40%;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: inherit;
+    animation: showSection 1s linear forwards;
+    animation-play-state: paused;
 }
 
-/*Project Title Styling */
-.about__title{
-    display: flex;
-    justify-content: center;
-    padding: 0 0 70px 0; 
-    /* order: top right bottom left */
-    color: #fff;
+@keyframes showSection{
+    100%{
+        z-index:1;
+        opacity: 1;
+    }
 }
 
-/*Card List styling */
-
-.card__wrapper{
-    max-width: 1100px;
-    margin: 0 60px 35px;
-    padding: 20px 10px;
-    overflow-y: hidden;
-    overflow-x: hidden;
+/*customize the go back button */
+.back__button{
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    background-color: #131313;
 }
-.card__list .card__item .card__link{
-    user-select: none;
-    display: block;
-    padding: 18px;
-    border-radius: 20px;
-    border-color: transparent;
-    text-decoration: none;
-    background-color: #19191a;
-}
-
-.card__list .card__item .card__link:hover{
-    border: 2px solid #10c0e8;
-    transition: all 0.5s ease-in;
-}
-
-
-.card__list .card__link .card__image{
-    width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 20px;
-
-}
-
-.card__list .card__link .project__title{
-    font-size: 25px;
-    background: linear-gradient(to right, #10c0e8 70%, #0b56e0);
-    text-align: center;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: 8px 16px;
-    margin: 16px 0 18px;
-
-}
-
-.card__list .card__link .divider{
-    width: 70px;
-    height: 3px;
-    margin: 5px auto; 
-    transition: all 0.4s ease;
-    background-color: #fff;
-}
-
-.card__list .card__link span{
-    display: block;
-}
-
-.card__list .card__link .skills{
-    text-align: center;
-    font-size: 20px;
-    background: linear-gradient(to right, #10c0e8 70%, #0b56e0);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* padding: 8px 16px;
-    margin: 16px 0 18px; */
-
-}
-
-.card__list .card__link .card__button{
-    height:45px;
-    width: 45px;
-    color: #10c0e8;
-    border-radius: 50%;
-    background: #19191a;
-    margin: 30px 0px 5px;
-    cursor: pointer; /*changes, controls the cursor to look like that of a pointer! */
-}
-
-.card__list .card__link .card__button:hover{
-    animation: cardButtonAnim 1.4s ease-in 0.3s infinite;
-    /*here, using the animation defined below, with the animation curve profile type of ease-in (glide path), with a duration of 1.0s (total) and delay of 0.1s, infinite means loop forever!!!! */
-}
-
-@-webkit-keyframes cardButtonAnim{
-    from {color: transparent;}
-    to{color: #10c0e8;}
-    
-}
-
-/* styling the pagination under the About page */
-.card__wrapper .swiper-pagination-bullet{
-    height: 13px;
-    width: 13px;
-    background: #fff;
-    opacity: 0.5;
-}
-
-.card__wrapper .swiper-pagination-bullet-active{
-    opacity: 1;
-
-}
-
-

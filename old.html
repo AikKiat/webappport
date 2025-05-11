@@ -6,49 +6,92 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="old.css">
+        <link rel="stylesheet" href="">
     </head>
     <body>
-        <!--Navbar component-->
-    <nav class = "navbar">
-        <div class="navbar__container">
-            <a href="#home" id="navbar__logo"></a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span> <!--creates a single white bar element!-->
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="#home" class="navbar__links" id="home-page">Home</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#about" class="navbar__links" id="about-page">About</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#projects" class="navbar__links" id="projects-page">Projects</a>
-                </li>
-                <li class="navbar__btn">
-                    <a href="#connect" class="button" id="connect">connect</a>
-                </li>
-            </ul>
+        <section class="section__container">
+                    <div class="sections">
+                        <div class="about__section" id="1">
+                            <span id="bounding__border">
+                                <h1 id="about__me">About me</h1>
+                                <p id="intro__text">Hello! I am Thng Aik Kiat, currently a year 2 student at SUTD. I like to spend time coding projects in python, having picked it up since 2017. 
+                                    Apart from Python I have also acquired a great many other languages under my belt, such as Java, Javascript, CSS, HTML. All part and parcel of my eventful 
+                                    journey learning ever more, in the field of computer science.
+                                </p>
+                                <!-- <div class="man">&nbsp&nbsp&nbsp&nbsp<span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>\</span></div>
+                                <div class="man">&nbsp&nbsp&nbsp<span>|</span>&nbsp<span>---</span>&nbsp&nbsp<span>|---</span></div>
+                                <div class="man">&nbsp&nbsp&nbsp<span>\</span>&nbsp&nbsp&nbsp&nbsp&nbsp<span>\</span>&nbsp&nbsp<span>|</span></div>
+                                <div class="man">&nbsp&nbsp&nbsp&nbsp<span>\</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>/</span></div>
+                                <div class="man">&nbsp&nbsp&nbsp<span>/</span>&nbsp<span>|</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>-----</span><span>------</span></div>
+                                <div class="man">&nbsp&nbsp<span>|</span>&nbsp<span>|</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>------</span><span>//</span></div>
+                                <div class="man">&nbsp&nbsp<span>\</span>&nbsp`&nbsp&nbsp&nbsp&nbsp&nbsp<span>/</span></div>
+                                <div class="man">&nbsp&nbsp&nbsp<span>|`</span>&nbsp&nbsp&nbsp&nbsp<span>|</span></div>
+                                <div class="man">&nbsp&nbsp&nbsp<span>|</span>&nbsp&nbsp&nbsp&nbsp<span>/___ /</span></div>
+                                <div class="man">&nbsp&nbsp&nbsp<span>\____</span>&nbsp&nbsp<span>`</span>&nbsp<span>/</span></div>
+                                <div class="man">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>|</span>&nbsp&nbsp<span>/</span>&nbsp</div>
+                                <div class="man">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>\</span></div>
+                                <div class="man">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>---`</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div> -->
+                            </span>
+                        </div>
 
-            <div class="man">&nbsp&nbsp&nbsp&nbsp<span>________</span></div>
-                    <div class="man">&nbsp&nbsp&nbsp/&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp\</div>
-                    <div class="man">&nbsp&nbsp&nbsp|&nbsp---&nbsp&nbsp---|</div>
-                    <div class="man">&nbsp&nbsp&nbsp\&nbsp&nbsp&nbsp&nbsp&nbsp\&nbsp&nbsp|</div>
-                    <div class="man">&nbsp&nbsp&nbsp&nbsp\&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/</div>
-                    <div class="man">&nbsp&nbsp&nbsp/ |&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp------</div>
-                    <div class="man">&nbsp&nbsp|&nbsp|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp------</div>
-                    <div class="man">&nbsp&nbsp\&nbsp`&nbsp&nbsp&nbsp&nbsp&nbsp/</div>
-                    <div class="man">&nbsp&nbsp&nbsp`|&nbsp&nbsp&nbsp&nbsp|___</div>
-                    <div class="man">&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp___ /</div>
-                    <div class="man">&nbsp&nbsp&nbsp\____&nbsp&nbsp&nbsp/`</div>
-                    <div class="man">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/&nbsp/ |&nbsp</div>
-                    <div class="man">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|&nbsp\ </div>
-                    <div class="man">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp---`&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
-                    <div class="man">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
-        </div>
-    </nav>
+
+                        <div class="project__section" id="2">
+                            <div class="container swiper">
+                                <h1 class="about__title">My Projects</h1>
+                                <div class="card__wrapper">
+                                    <ul class="card__list swiper-wrapper">
+                                        <li class="card__item swiper-slide">
+                                            <a href="#" class="card__link">
+                                                <img src="images/thumbnai.PNG" alt="Image 1" class="card__image"> <!--alt denotes the placeholder message to be displayed when the image is still loading-->
+                                                <h2 class="project__title">Pools of Possibilities</h2>
+                                                <span class="divider"></span>
+                                                <h3 class="skills">Python, Blender, Computer Vision</h3>
+                                                <button class="card__button 
+                                                material-symbols-outlined">chevron_right</button>
+                                            </a>
+                                        </li>
+                                        <li class="card__item swiper-slide">
+                                            <a href="#" class="card__link">
+                                                <img src="images/thumbnai.PNG" alt="Image 2" class="card__image"> <!--alt denotes the placeholder message to be displayed when the image is still loading-->
+                                                <h2 class="project__title">Pools!</h2>
+                                                <span class="divider"></span>
+                                                <h3 class="skills">Python, Blender, Computer Vision</h3>
+                                                <button class="card__button 
+                                                material-symbols-outlined">chevron_right</button>
+                                            </a>
+                                        </li>
+                                        <li class="card__item swiper-slide">
+                                            <a href="#" class="card__link">
+                                                <img src="images/thumbnai.PNG" alt="Image 2" class="card__image"> <!--alt denotes the placeholder message to be displayed when the image is still loading-->
+                                                <h2 class="project__title">Pools of!</h2>
+                                                <span class="divider"></span>
+                                                <h3 class="skills">Python, Blender, Computer Vision</h3>
+                                                <button class="card__button 
+                                                material-symbols-outlined">chevron_right</button>
+                                            </a>
+                                        </li>
+                                        <li class="card__item swiper-slide">
+                                            <a href="#" class="card__link">
+                                                <img src="images/thumbnai.PNG" alt="Image 2" class="card__image"> <!--alt denotes the placeholder message to be displayed when the image is still loading-->
+                                                <h2 class="project__title">Pools of Poss!</h2>
+                                                <span class="divider"></span>
+                                                <h3 class="skills">Python, Blender, Computer Vision</h3>
+                                                <button class="card__button 
+                                                material-symbols-outlined">chevron_right</button>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills__section" id="3">
+                            <h1>My Skills</h1>
+                        </div>
+                    </div>
+                </section>
     </body>
 </html>

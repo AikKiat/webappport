@@ -20,7 +20,9 @@
             <div id="crt">
                 <div class="scanline"></div>
                 <div class="terminal"></div>
+                <div class="static__mask"></div>
                 <section class="hero" id="home">
+                    <div class="background"></div>
                     <div class="hero__container">
                         <h1 class="hero__heading">Greetings</h1>
                         <div class="inner__container">
@@ -28,12 +30,36 @@
                             <ul class="dynamic__texts">
                             </ul>
                             </div>
-                            <form class="input__field">
-                                <label>Awaiting Input:</label>
-                                    <input type="text" placeholder="press 'start'"/>
-                            </form>
+                            <div class="input__field">
+                                <button class="start__button" onclick="start()">Start</button>
+                            </div>
                         </div>
                     </div>  
+                </section>
+
+                <section class="about__section">
+                    <div id="content">
+                        <h1>About me</h1>
+                        <p>I am Thng Aik Kiat, currently a Year 2 student at SUTD, Computer Science and Design. 
+                            Since learning python back in 2016, I have picked various meaningful nougats of knowledge in the ever expansive
+                            field of Coding and Computer Science. My passion lies primarily in frontend App <img id="android" src="images/android.png"> and Web development <img src="images/computer.png"> AI and its applications 
+                            especially regarding Computer Vision and Machine Learning for Data Analytics, and finally a longtime interest of mine also currently pursuing 
+                            in my university courses as well - Cybersecurity. Here are some of my more recent milestones, in chronological order:
+                        </p>
+                        <p>I am currently pursuing these courses for extra learning:</p>
+                        <ul>
+                            <li>Intro to LLMs and Langchain</li>
+                            <li>Cybersecurity Course</li>
+                        </ul>
+                        <p>My other side hobbies include realistic 3D Character Art using Zbrush, and making cool stuff in Unreal Engine 5</p>
+                    </div>
+                    <button class="back__button" onclick="goBack()"></button>
+                </section>
+                <section class="projects__section">My Projects
+                    <button class="back__button" onclick="goBack()"></button>
+                </section>
+                <section class="skills__section">My Skills!
+                    <button class="back__button" onclick="goBack()"></button>
                 </section>
 
                 <section class="search__section">
@@ -57,91 +83,6 @@
                     </button>
                 </section>
             </div>
-
-                <section class="section__container">
-                    <div class="sections">
-                        <div class="about__section" id="1">
-                            <span id="bounding__border">
-                                <h1 id="about__me">About me</h1>
-                                <p id="intro__text">Hello! I am Thng Aik Kiat, currently a year 2 student at SUTD. I like to spend time coding projects in python, having picked it up since 2017. 
-                                    Apart from Python I have also acquired a great many other languages under my belt, such as Java, Javascript, CSS, HTML. All part and parcel of my eventful 
-                                    journey learning ever more, in the field of computer science.
-                                </p>
-                                <!-- <div class="man">&nbsp&nbsp&nbsp&nbsp<span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>\</span></div>
-                                <div class="man">&nbsp&nbsp&nbsp<span>|</span>&nbsp<span>---</span>&nbsp&nbsp<span>|---</span></div>
-                                <div class="man">&nbsp&nbsp&nbsp<span>\</span>&nbsp&nbsp&nbsp&nbsp&nbsp<span>\</span>&nbsp&nbsp<span>|</span></div>
-                                <div class="man">&nbsp&nbsp&nbsp&nbsp<span>\</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>/</span></div>
-                                <div class="man">&nbsp&nbsp&nbsp<span>/</span>&nbsp<span>|</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>-----</span><span>------</span></div>
-                                <div class="man">&nbsp&nbsp<span>|</span>&nbsp<span>|</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>------</span><span>//</span></div>
-                                <div class="man">&nbsp&nbsp<span>\</span>&nbsp`&nbsp&nbsp&nbsp&nbsp&nbsp<span>/</span></div>
-                                <div class="man">&nbsp&nbsp&nbsp<span>|`</span>&nbsp&nbsp&nbsp&nbsp<span>|</span></div>
-                                <div class="man">&nbsp&nbsp&nbsp<span>|</span>&nbsp&nbsp&nbsp&nbsp<span>/___ /</span></div>
-                                <div class="man">&nbsp&nbsp&nbsp<span>\____</span>&nbsp&nbsp<span>`</span>&nbsp<span>/</span></div>
-                                <div class="man">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>|</span>&nbsp&nbsp<span>/</span>&nbsp</div>
-                                <div class="man">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>\</span></div>
-                                <div class="man">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>---`</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div> -->
-                            </span>
-                        </div>
-
-
-                        <div class="project__section" id="2">
-                            <div class="container swiper">
-                                <h1 class="about__title">My Projects</h1>
-                                <div class="card__wrapper">
-                                    <ul class="card__list swiper-wrapper">
-                                        <li class="card__item swiper-slide">
-                                            <a href="#" class="card__link">
-                                                <img src="images/thumbnai.PNG" alt="Image 1" class="card__image"> <!--alt denotes the placeholder message to be displayed when the image is still loading-->
-                                                <h2 class="project__title">Pools of Possibilities</h2>
-                                                <span class="divider"></span>
-                                                <h3 class="skills">Python, Blender, Computer Vision</h3>
-                                                <button class="card__button 
-                                                material-symbols-outlined">chevron_right</button>
-                                            </a>
-                                        </li>
-                                        <li class="card__item swiper-slide">
-                                            <a href="#" class="card__link">
-                                                <img src="images/thumbnai.PNG" alt="Image 2" class="card__image"> <!--alt denotes the placeholder message to be displayed when the image is still loading-->
-                                                <h2 class="project__title">Pools!</h2>
-                                                <span class="divider"></span>
-                                                <h3 class="skills">Python, Blender, Computer Vision</h3>
-                                                <button class="card__button 
-                                                material-symbols-outlined">chevron_right</button>
-                                            </a>
-                                        </li>
-                                        <li class="card__item swiper-slide">
-                                            <a href="#" class="card__link">
-                                                <img src="images/thumbnai.PNG" alt="Image 2" class="card__image"> <!--alt denotes the placeholder message to be displayed when the image is still loading-->
-                                                <h2 class="project__title">Pools of!</h2>
-                                                <span class="divider"></span>
-                                                <h3 class="skills">Python, Blender, Computer Vision</h3>
-                                                <button class="card__button 
-                                                material-symbols-outlined">chevron_right</button>
-                                            </a>
-                                        </li>
-                                        <li class="card__item swiper-slide">
-                                            <a href="#" class="card__link">
-                                                <img src="images/thumbnai.PNG" alt="Image 2" class="card__image"> <!--alt denotes the placeholder message to be displayed when the image is still loading-->
-                                                <h2 class="project__title">Pools of Poss!</h2>
-                                                <span class="divider"></span>
-                                                <h3 class="skills">Python, Blender, Computer Vision</h3>
-                                                <button class="card__button 
-                                                material-symbols-outlined">chevron_right</button>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="swiper-pagination"></div>
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skills__section" id="3">
-                            <h1>My Skills</h1>
-                        </div>
-                    </div>
-                </section>
         </div>
     </div>
     <!--Linking SwiperJS script!-->
