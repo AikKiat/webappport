@@ -41,7 +41,7 @@
                         <h1>About me</h1>
                         <p>I am Thng Aik Kiat, currently a Year 2 student at SUTD, Computer Science and Design. 
                             Since learning python back in 2016, I have picked various meaningful nougats of knowledge in the ever expansive
-                            field of Coding and Computer Science. My passion lies primarily in frontend App <img id="android" src="images/android.png"> and Web development <img src="images/computer.png"> AI and its applications 
+                            field of Coding and Computer Science. My passion lies primarily in frontend App <img id="android" src="images/icons/androidstudio.png"> / Web dev <img id="webdev" src="images/icons/webdev.png">, as well as AI and its applications 
                             especially regarding Computer Vision and Machine Learning for Data Analytics, and finally a longtime interest of mine also currently pursuing 
                             in my university courses as well - Cybersecurity. Here are some of my more recent milestones, in chronological order:
                         </p>
@@ -52,14 +52,25 @@
                         </ul>
                         <p>My other side hobbies include realistic 3D Character Art using Zbrush, and making cool stuff in Unreal Engine 5</p>
                     </div>
-                    <button class="back__button" onclick="toggle('about')"></button>
+                    <button id="back__button" onclick="toggle('about')">
+                        <div class="cross">
+                            <span id="cross__1"></span>
+                            <span id="cross__2"></span>
+                        </div>
+                    </button>
                 </section>
                 <div class="projects__section">
                     <div class="projects__section__border">
                     </div>
                     <section class="projects__container">
                     <div id="title__and__button">
-                        <button class="back__button" onclick="toggle('projects')"></button>
+                        <h1>Key Projects</h1>
+                        <button id="back__button" onclick="toggle('projects')">
+                            <div class="cross">
+                                <span id="cross__1"></span>
+                                <span id="cross__2"></span>
+                            </div>
+                        </button>
                     </div>
                     <div class="slider__container">
                         <div class="card__wrap">
@@ -67,13 +78,19 @@
                             <div class="project1" id="project__Card">
                                 <div class="img__holder">
                                     <img id="project__image" src="images/project_images/smarthealth.png">
+                                    
                                 </div>
+                                <div class="image__border"></div>
                                 <div class="description">
                                     <h1>SmartHealth</h1>
                                     <p>All in one HealthTech 
-                                        app people in their 50s - 60s and caregivers of the elderly.</p>
+                                        app people in their 50s - 60s and caregivers of the elderly. Includes realtime food nutrient analyser, 
+                                        medicinal package detail abstraction, on the fly in-house AI chatbot, 
+                                        calender and intake scheduling system, and a live medical centre finder with directions for the fastest route. </p>
                                 </div>
-                                <button class="card__button">Learn More</button>
+                                <a href="https://github.com/ItsMeOX/SmartHealth">
+                                    <button class="card__button">Learn More</button>
+                                </a>
                                 <div class="project__card__border"></div>
                             </div>
                             
@@ -82,13 +99,17 @@
                             <div class="project2" id="project__Card">
                                 <div class="img__holder">
                                     <img id="project__image" src="images/project_images/popkids.PNG">
+                                    
                                 </div>
+                                <div class="image__border"></div>
                                 <div class="description">
                                     <h1>Pools of Possibilities</h1>
                                     <p>Life-sized Virtual Fish simulations using Computer Vision, Mediapipe Motion Gesture detection library, 
                                         transferring results to control simulation entities in a 3D Blender Environment </p>
                                 </div>
-                                <button class="card__button">Learn More</button>
+                                <a href="https://github.com/AikKiat/Pools-of-Possibilities-FIsh-Flock-Simulation-and-Motion-Gesture-Detection-in-Blender">
+                                    <button class="card__button">Learn More</button>
+                                </a>
                                 <div class="project__card__border"></div>
                             </div>
                         </div>
@@ -96,14 +117,18 @@
                             <div class="project3" id="project__Card">
                                 <div class="img__holder">
                                     <img id="project__image" src="images/project_images/nlpproject.PNG">
+                                    
                                 </div>
+                                <div class="image__border"></div>
                                 <div class="description">
-                                    <h1>Mobile Detect!</h1>
+                                    <h1>FRED: Flutter Realtime Element Detection</h1>
                                     <p>Trying out realtime object detection in Flutter, using TensorflowLite.
                                         Inspiration: applying computer vision for meaningful, helpful and practical uses.</p>
                                     
                                 </div>
-                                <button class="card__button">Learn More</button>
+                                <a href="#">
+                                    <button class="card__button">Learn More</button>
+                                </a>
                                 <div class="project__card__border"></div>
                             </div>
                         </div>
@@ -111,14 +136,18 @@
                             <div class="project4" id="project__Card">
                                 <div class="img__holder">
                                     <img id="project__image" src="images/project_images/mathamaticianmassacre.PNG">
+                                    
                                 </div>
+                                <div class="image__border"></div>
                                 <div class="description">
                                     <h1>The Mathematician's Massacre</h1>
                                     <p>Fun game for learning mathematics, made using Python standard libraries and Tkinter. 
                                         Focused on creating sound effects, figure and blood spatter animations, kill streak system. </p>
                                     
                                 </div>
-                                <button class="card__button">Learn More</button>
+                                <a href="https://github.com/AikKiat/The-Mathematician-s-Massacre">
+                                    <button class="card__button">Learn More</button>
+                                </a>
                                 <div class="project__card__border"></div>
                             </div>
                         </div>
@@ -126,14 +155,17 @@
                         <div class="card">
                             <div class="project5" id="project__Card">
                                 <div class="img__holder">
-                                    <img id="project__image" src="images/project_images/mathamaticianmassacre.PNG">
+                                    <img id="project__image" src="images/project_images/nlpproject.PNG">
                                 </div>
+                                <div class="image__border"></div>
                                 <div class="description">
-                                    <h1>NLP Aritcle Relations Visualiser</h1>
+                                    <h1>News Article Detective, A NLP Text Relations Project</h1>
                                     <p>Simple personal project on my first experience of using NLP Rebel model to gather commonalities
                                          among different news articles, and visualize their relations using on a Pyvis network. </p>
                                 </div>
-                                <button class="card__button">Learn More</button>
+                                <a href="https://github.com/AikKiat/News-Article-Detective-NLP-Texts-Relations-Project-">
+                                    <button class="card__button">Learn More</button>
+                                </a>
                                 <div class="project__card__border"></div>
                             </div>
                         </div>
@@ -141,8 +173,48 @@
                     </div>
                     </section>
                 </div>
-                <section class="skills__section">My Skills!
-                    <button class="back__button" onclick="toggle('skills')"></button>
+                <section class="skills__section">
+                    <div class="my__skills">
+                        <h1>My Skills</h1>
+                            <div>
+                                <div class="languages">
+                                    <h1>Languages</h1>
+                                    <img src="images/icons/python.png" id="python" class="icon">
+                                    <img src="images/icons/java.png" id="java" class="icon">
+                                    <img src="images/icons/html5.png" id="html5" class="icon">
+                                    <img src="images/icons/css.png" id="css" class="icon">
+                                    <img src="images/icons/JavaScript-logo.png" id="js" class="icon">
+                                </div>
+                                <div class="libraries">
+                                    <h1>Libraries</h1>
+                                    <div>
+                                        <img src="images/icons/tensroflow.png" id="tf" class="icon">
+                                        <img src="images/icons/pandas.png" id="pd" class="icon">
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="frameworks__env">
+                            <h1>Frameworks, and Development Environments</h1>
+                            <div>
+                                <img src="images/icons/androidstudio.png" id="androidstudio" class="icon">
+                            <img src="images/icons/flutter.png" id="flutter" class="icon">
+                            </div>
+                        <div class="art">
+                            <h1>3D Art</h1>
+                            <div>
+                                <img src="images/icons/blender.png" id="blender" class="icon">
+                            <img src="images/icons/ue5.png" id="ue5" class="icon">
+                            <img src="images/icons/zbrush.jpg" id="zbrush", class="icon">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <button id="back__button" onclick="toggle('skills')">
+                        <div class="cross">
+                            <span id="cross__1"></span>
+                            <span id="cross__2"></span>
+                        </div>
+                    </button>
                 </section>
 
                 <section class="search__section">
