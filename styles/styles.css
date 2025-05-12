@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
 @import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
 
 *{
@@ -17,7 +15,6 @@
 
 :root{
     --step--length:34;
-    --animation--duration:3.0s;
 
     --clr-inner: #10c0e8;
     --clr-outer: #009cff;
@@ -94,7 +91,6 @@
     top: 30%;
     height: fit-content;
     width: 70%;
-    opacity: 1;
     background: #13131332;
     border: 0.3rem dashed #131313;
     display: flex;
@@ -103,9 +99,6 @@
     color: #fff;
 
     box-shadow: 0 0 0.9rem 0.2rem #009cff, inset 0 0 0.9rem 0.2rem #009cff;
-
-    animation: showSection 1s linear forwards;
-    animation-play-state: paused;
 }
 
 .about__section #content{
@@ -119,6 +112,7 @@
     right: 0%;
     padding: 1rem;
     font-size: 1.5rem;
+    
 
 }
 
@@ -128,19 +122,118 @@
 }
 
 .projects__section{
+    position: absolute;
+    top:20%;
+    left: 10%;
+    bottom: 30%;
     z-index: -1;
     opacity: 0;
-
-    position: absolute;
-    top: 50%;
-    height: 40%;
-    width: 100%;
-    opacity: 0;
-    background-color: inherit;
-    animation: showSection 1s linear forwards;
-    animation-play-state: paused;
+    display: flex;
+    flex: row;
+    width: 80%;
+    height:60%;
+    box-shadow: 0 0 0.9rem 0.2rem #0048ff, inset 0 0 0.9rem 0.2rem #009cff;
 }
 
+.projects__section__border{
+    z-index: -2;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    filter: blur(0.1rem);
+    background-image: radial-gradient(
+		ellipse, transparent 80%,
+		  #0037ff 0%
+	);
+    filter: blur(2rem);
+    animation: editBlur 4s ease-out infinite;
+}
+
+@keyframes editBlur{
+    0%{
+        filter: blur(2rem);
+    }
+    66%{
+      
+        filter: blur(1.7rem);
+    }
+    100%{
+        filter: blur(2rem);
+    }
+}
+.projects__section__border p{
+    z-index: -1;
+    color: #fff;
+    font-size: 1rem;
+    text-wrap:wrap;
+}
+
+.projects__section__border::before{
+    position: absolute;
+    content: "";
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    filter:blur(1rem);
+}
+.projects__container{
+    position: relative;
+    left:0%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: 0.3rem dashed #131313;
+    color: #131313;
+}
+
+.projects__section #title__and__button{
+    display: flex;
+    flex-direction: row;
+}
+
+.projects__section #title__and__button h1{
+    position: relative;
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+}
+
+/* Reset any conflicting styles */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.slider__container {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.slider__container::-webkit-scrollbar {
+    width: 80px;
+    height: 5px;
+}
+.slider__container::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.slider__container::-webkit-scrollbar-track {
+    background: rgba(224, 224, 224, 0.2);
+}
+
+.card__wrap {
+    position: relative;
+    top: 10%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .skills__section{
     z-index: -1;
     opacity: 0;
@@ -150,15 +243,6 @@
     height: 40%;
     width: 100%;
     background-color: inherit;
-    animation: showSection 1s linear forwards;
-    animation-play-state: paused;
-}
-
-@keyframes showSection{
-    100%{
-        z-index:1;
-        opacity: 1;
-    }
 }
 
 /*customize the go back button */

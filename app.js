@@ -199,28 +199,73 @@ function start(){
             element.style.animationPlayState = "running";
         }
     });
-    console.log("hello");
 }
 
-function slide(sectionName){
+function toggle(sectionName){
 
     const searchSection = document.querySelector(".search__section");
     const heroContainer = document.querySelector(".hero");
-    heroContainer.style.animationPlayState = "running";
-    searchSection.style.animationPlayState = "running";
+
+    const heroOpacity = window.getComputedStyle(heroContainer).opacity;
+    const searchOpacity = window.getComputedStyle(searchSection).opacity;
+    
+    if(heroOpacity == 1)
+    {
+        heroContainer.style.opacity =0;
+    } else if(heroOpacity == 0)
+    {
+        heroContainer.style.opacity = 1;
+    }
+    if(searchOpacity == 1)
+    {
+        searchSection.style.opacity = 0;
+    } else if(searchOpacity == 0)
+    {
+        searchSection.style.opacity = 1;
+    }
 
     //show sections based off sectionName
     if(sectionName == "about"){
+        console.log("over here");
         const aboutSection = document.querySelector(".about__section");
-        aboutSection.style.animationPlayState = "running";
+        const aboutOpacity = window.getComputedStyle(aboutSection).opacity;
+        if(aboutOpacity == 1)
+        {
+            console.log("over here!!!");
+            aboutSection.style.opacity = 0;
+            aboutSection.style.zIndex = -1;
+        } else if(aboutOpacity == 0)
+        {
+            console.log("changing opacity");
+            aboutSection.style.opacity = 1;
+            aboutSection.style.zIndex = 1;
+        }
     }
     else if(sectionName == "projects"){
-        const aboutSection = document.querySelector(".projects__section");
-        aboutSection.style.animationPlayState = "running";
+        const projectSection = document.querySelector(".projects__section");
+        const opacity = window.getComputedStyle(projectSection).opacity;
+        if(opacity == 1)
+        {
+            projectSection.style.opacity = 0;
+            projectSection.style.zIndex = -1;
+        } else if(opacity == 0)
+        {
+            projectSection.style.opacity = 1;
+            projectSection.style.zIndex = 1;
+        }
     }
 
     else if(sectionName == "skills"){
-        const aboutSection = document.querySelector(".skills__section");
-        aboutSection.style.animationPlayState = "running";
+        const skillsSection = document.querySelector(".skills__section");
+        const opacity = window.getComputedStyle(skillsSection).opacity;
+        if(opacity == 1)
+        {
+            skillsSection.style.opacity = 0;
+            skillsSection.style.zIndex = -1;
+        } else if(opacity == 0)
+        {
+            skillsSection.style.opacity = 1;
+            skillsSection.style.zIndex = 1;
+        }
     }
 }

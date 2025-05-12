@@ -1,0 +1,154 @@
+/* .card{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin: 2.5rem;
+    min-height: 300px;
+} */
+
+.card {
+    width: 25rem;
+    height: 25rem;
+    background:transparent;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    border-radius: 20px;
+}
+
+#project__Card{
+    position: relative;
+    background:
+    linear-gradient(135deg, transparent 45px, #40d1f5 0) top left,
+    linear-gradient(-45deg, transparent 45px, #40d1f5 0) bottom left;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    scroll-snap-align: start;
+    margin: 2.5rem;
+    padding: 2.5rem;
+    width: inherit;
+    height: 100%;
+}
+
+.img__holder{
+    position: relative;
+    bottom: 40%;
+    left: 60%;
+    width: 70%;
+    height: 70%;
+    border: 0.5rem solid #131313;
+    border-radius:50%;
+    overflow: hidden;
+}
+
+.project__card__border{
+    z-index: -2;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    background:
+    linear-gradient(135deg, transparent 45px, black 0) top left,
+    linear-gradient(-45deg, transparent 45px, black 0) bottom left;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    transform: scale(1.05);
+}
+
+/* #project__Card::after{
+    z-index: -1;
+    content: "";
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+		circle,#03fc49 5%,
+		transparent 95%
+	);
+} */
+
+.description{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;
+    left: 0%;
+    padding: 0.5rem;
+}
+
+.description h1{
+    position:absolute;
+    bottom: 30%;
+    left: 0%;
+    width: 60%;
+    height:fit-content;
+    text-wrap-mode: wrap;
+    position: relative;
+    padding: 0.8rem;
+}
+
+.description p{
+    position: absolute;
+    left: 0%;
+    bottom: 50%;
+    height: fit-content;
+    padding: 2rem;
+    text-wrap-mode: wrap;
+}
+
+.project3 .description p{
+    bottom: 50%;
+}
+
+.project1 .description p{
+    position: relative;
+    padding: 2rem;
+    bottom: 20%;
+}
+
+.project4 .description p{
+    position: inherit;
+    top: 10%;
+    left: 0%;
+}
+
+#project__image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__button{
+    z-index: 2;
+    position: relative;
+    top: 30%;
+    width: 30%;
+    height: 30%;
+    background: #40d1f5;
+    border: 0.2rem solid #131313;
+    font-size: 1.5rem;
+}
+
+.card__button.card__button:hover{
+    animation: squish 0.6s ease-in-out infinite;
+}
+
+@keyframes squish{
+    50%{
+        transform: scaleY(0.8);
+    }
+    100%{
+        transform: scaleY(1.0);
+    }
+}
+

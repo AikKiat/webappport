@@ -1,9 +1,12 @@
 /*Search Exploration Styling */
 .search__section{
+    position: absolute;
     display: flex;
+    bottom: 0%;
     justify-content: space-evenly;
     width: 100%;
     height: 5rem;
+
 }
 
 .search__section .navigation__button{
@@ -129,15 +132,5 @@
 }
 
 .search__section{
-    animation: removeFromView 1s linear forwards;
-    animation-play-state: paused;
-}
-
-@keyframes removeFromView{
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
+    opacity: 1;
 }

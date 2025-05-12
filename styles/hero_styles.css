@@ -8,8 +8,9 @@
 .hero{
     z-index: 1;
     position: relative;
-    animation: transformUp 1s linear forwards;
-    animation-play-state:paused;
+    opacity: 1;
+    /* animation: transformUp 1s linear forwards;
+    animation-play-state:paused; */
 
 }
 
