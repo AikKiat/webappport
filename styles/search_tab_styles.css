@@ -1,11 +1,11 @@
 /*Search Exploration Styling */
 .search__section{
-    position: absolute;
+    position: relative;
     display: flex;
     left: 0%;
-    bottom: 20%;
-    width: 100%;
-    height: 5rem;
+    top: 0%;
+    width: fit-content;
+    height: fit-content;
     justify-content: center;
 
 }
@@ -20,7 +20,7 @@
     background: inherit;
     border-radius: 0.25rem;
     color: #fff;
-    height: 100%;
+    height: 5rem;
 
     margin: 2rem;
 

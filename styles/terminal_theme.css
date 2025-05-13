@@ -1,9 +1,13 @@
 html, body, #monitor, #screen, #crt {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    min-height: fit-content;
 }
 
 
@@ -37,6 +41,7 @@ html, body, #monitor, #screen, #crt {
 	background-size: 100% 8px;
 	z-index: 2;
 	pointer-events: none;
+	/* height: 100%; */
 }
 #crt,
 pre {
@@ -46,12 +51,11 @@ pre {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	min-width: 80ch; /* This makes 80 monospace characters fit on the screen */
-	height: calc(80ch * 0.8);
-	font-size: max(
+	align-items: center;
+	/* font-size: max(
 		1rem,
 		2.2vmin
-	); /* Scale the font-size relative to the minimum screen dimension */
+	); Scale the font-size relative to the minimum screen dimension */
 	position: relative;
 	background:  #1071e8;
 	background-image: radial-gradient(
@@ -59,7 +63,7 @@ pre {
 		 #1071e8 0%,
 		black 90%
 	);
-	overflow: hidden;
+	overflow-y: auto;
 }
 
 #crt:after {

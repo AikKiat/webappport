@@ -6,12 +6,10 @@
 }
 
 .hero{
-    z-index: 1;
-    position: absolute;
+    display: flex;
+    position: relative;
     width: 100%;
-    height: 50%;
-    left: 0%;
-    top: 10%;
+    height: 60%;
     opacity: 1;
     /* animation: transformUp 1s linear forwards;
     animation-play-state:paused; */
@@ -39,7 +37,7 @@
 }
 
 
-.hero .background, .background::before{
+.background, .background::before{
     position: absolute;
     display:block;
     content: "";
