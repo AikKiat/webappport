@@ -1,0 +1,328 @@
+
+
+
+@media all and (max-width: 1024px){ 
+    .dynamic__texts li{
+        list-style: none;
+        font-size:2rem;
+        font-weight: 500px;
+        text-align: left;
+    }
+
+    .about__section{
+        top: 15%;
+    }
+
+    .about__section #back__button{
+        margin: 1rem;
+        position: absolute;
+        width: 10%;
+        height: 10%;
+    }
+
+    .description h1{
+        font-size: 2rem;
+    }
+
+    .project1 .description p{
+        top:-10%;
+    }
+
+    .card {
+        width: 25rem;
+        height: 28rem;
+    }
+
+
+    .my__skills .libraries{
+        transform: translateY(-1rem);
+    }
+
+    .languages .icon{
+        margin-top: 1rem;
+    }
+
+    .art .icon{
+        transform: scale(1.3);
+    }   
+    .art #ue5{
+        transform: scale(1.5);
+    }
+
+    .skills__section #back__button{
+        /* position: relative;
+        width: 15%;
+        height: 15%;
+        background:#10c0e8; */
+        transform: scale(0.8);
+    }
+}
+
+@media all and (max-width:768px){
+
+    .start__button{
+        right: 5%;
+    }
+    
+    .dynamic__texts li{
+        list-style: none;
+        font-size:1.8rem;
+        font-weight: 500px;
+        text-align: left;
+    }
+
+    .hero{
+        /* z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        left: 0%;
+        top: 10%;
+        opacity: 1; */
+        /* animation: transformUp 1s linear forwards;
+        animation-play-state:paused; */
+        height: 40%;
+        top: 20%;
+    }
+
+    .hero .background{
+        transform: scaleX(1.3);
+    }
+
+    .about__section{
+        top: 5%;
+    }
+
+    .about__section #back__button{
+        height: 5%;
+        width: 8%;
+        transform: scale(1.4);
+        top: 2%;
+        right: 3%;
+    }
+
+    .projects__section #back__button{
+        height: 8%;
+        transform: scale(1.1);
+    }
+
+    .description p{
+        font-size: 1.5rem;
+    }
+    .projects__section #title__and__button h1{
+        font-size: 3rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+
+
+    
+
+    .project1 .description p{
+        font-size: 1.3rem;
+    }
+
+    .project2 .description p{
+        transform: translateY(-1.5rem);
+    }
+
+    .project3 .description p{
+        transform: translateY(-0.5rem);
+    }
+
+    .project4 .description p{
+        transform: translateY(-0.8rem);
+    }
+
+    .project5 .description p{
+        transform: translateY(-1.0rem);
+    }
+
+    .languages .icon{
+        transform: scale(4.0);
+        margin-left: 1.3rem;
+    }
+
+    .languages #css{
+        /* transform: scale(2.5);
+        margin-left: 1.0rem; */
+        transform: scale(4.9);
+    }
+
+    .frameworks__env .icon{
+        margin-left: 1rem;
+        transform: scale(1.5);
+    }
+
+    .art .icon{
+        margin-left: 0;
+        transform: scale(1.5);
+    }
+
+    .art #blender{
+        margin-left: 1rem;
+    }
+
+    .art #ue5{
+        transform: scale(1.8);
+    }
+
+    .my__skills .libraries{  
+        transform: translateY(0.2rem);
+    }
+
+    .libraries .icon{
+        transform: scale(1.5);
+    }
+
+    .libraries #pd{
+        transform: scale(2.0);
+    }
+
+    .libraries #tf{
+        margin-left: 1rem;
+    }
+
+    .skills__section #back__button{
+        /* position: relative;
+        width: 15%;
+        height: 15%;
+        background:#10c0e8; */
+
+        height: 10%;
+        transform: scale(1.0);
+    }
+
+    .skills__section h1{
+        transform: translateY(-0.5rem);
+    }
+
+}
+
+@media all and (max-width: 425px){
+
+    .hero{
+        width: 425px;
+        top: 7%;
+    }
+
+    .hero .background{
+        transform: scaleX(1.5);
+    }
+
+    .dynamic__texts li{
+        font-size: 1.5rem;
+    }
+
+    .search__section{
+        display: flex;
+        flex-direction: column;
+        bottom: 7%;
+        left: 27%;
+        height: 45%;
+        justify-content: center;
+    }
+
+    .search__section .navigation__button{
+        transform: scale(1.0);
+        margin-left: 0;
+    }
+
+    .about__section{
+        left: 7%;
+        top: 15%;
+    }
+
+    .about__section h1{
+        position: relative;
+        bottom: 3%;
+    }
+
+    .about__section #content{
+        font-size: 1.0rem;
+    }
+
+    .about__section #content #android{
+        margin: 0;
+    }
+
+    .about__section #content #webdev{
+        margin: 0;
+        transform: scale(0.8);
+    }
+
+    .projects__section{
+        /* top:20%;
+        left: 10%;
+        bottom: 30%;
+        z-index: -1;
+        opacity: 0;
+        display: flex;
+        flex: row;
+        width: 80%;
+        height:70%; */
+        left: 7%;
+        width: 70%;
+        height: 80%;
+        top: 10%;
+    }
+
+    .card__wrap{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        width: 20rem;
+        height: 26.5rem;
+        margin-left: 1.0rem;
+        margin-right: 0;
+    }
+
+    .description p{
+        font-size: 1.0rem;
+    }
+
+    .project1 .description p{
+        font-size: 1.1rem
+    }
+
+    .project2 .description p{
+        font-size: 1.2rem
+    }
+
+    .project3 .description h1{
+        font-size: 1.5rem;
+    }
+
+    .project3 .description p{
+        font-size: 1.3rem;
+        top:-5%;
+    }
+
+    .project4 .description h1{
+        font-size: 1.5rem;
+    }
+
+    
+    .project4 .description p{
+        font-size: 1.2rem;
+    }
+
+    .project5 .description h1{
+        font-size: 1.5rem;
+    }
+
+    .project5 .description p{
+        font-size: 1.2rem;
+        top: 3%;
+    }
+
+    .slider__container {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+
+}

@@ -120,6 +120,8 @@
 
 .project1 .description p{
     position: absolute;
+    left: 0%;
+    top: 0%;
     padding: 2rem;
 }
 

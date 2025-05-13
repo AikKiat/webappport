@@ -111,7 +111,7 @@
 }
 
 #back__button{
-    border-radius: 1rem;
+    border-radius: 0.2rem;
     border: none;
 }
 
@@ -276,14 +276,17 @@ html, body {
     overflow-x: auto;
 }
 .slider__container::-webkit-scrollbar {
+    display: none;
     width: 80px;
     height: 5px;
 }
 .slider__container::-webkit-scrollbar-thumb {
+    display: none;
     background: rgb(255, 255, 255);
     border-radius: 10px;
 }
 .slider__container::-webkit-scrollbar-track {
+    display: none;
     background: rgba(224, 224, 224, 0.2);
 }
 
@@ -344,6 +347,7 @@ html, body {
 }
 
 .my__skills .languages{
+    margin-top: 1rem;
     width: 50%;
 }
 
@@ -378,9 +382,9 @@ html, body {
 .my__skills .libraries{
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: 55%;
-    left: 30%;
+    position: absolute;
+    top: 62%;
+    left: 50%;
 }
 
 .libraries .icon{

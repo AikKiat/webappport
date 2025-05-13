@@ -146,7 +146,7 @@
 }
 
 .autotyping__wrapper{
-    display: inline-flex;
+    display: inline-block;
 }
 
 .dynamic__texts li{
@@ -154,6 +154,7 @@
     font-size:40px;
     font-weight: 500px;
     text-align: left;
+    text-wrap-mode: wrap;
 }
 
 .dynamic__texts li span{
