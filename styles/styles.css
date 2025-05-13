@@ -88,7 +88,7 @@
     position: absolute;
     right: 0%;
     top: 0%;
-    width: 10%;
+    width: 5%;
     height: 15%;
     background:#10c0e8;
 }
@@ -98,14 +98,14 @@
     margin: 1rem;
     right: 0%;
     top: 0%;
-    width: 8%;
+    width: 5%;
     height: 10%;
     background:#10c0e8;
 }
 
 .skills__section #back__button{
     position: relative;
-    width: 15%;
+    width: 10%;
     height: 15%;
     background:#10c0e8;
 }
@@ -191,7 +191,7 @@
 
 .projects__section{
     position: absolute;
-    top:20%;
+    top:10%;
     left: 10%;
     bottom: 30%;
     z-index: -1;
@@ -199,7 +199,7 @@
     display: flex;
     flex: row;
     width: 80%;
-    height:70%;
+    height:80%;
     box-shadow: 0 0 0.9rem 0.2rem #0048ff, inset 0 0 0.9rem 0.2rem #009cff;
 }
 
@@ -293,7 +293,7 @@ html, body {
 .card__wrap {
     z-index: 1;
     position: relative;
-    top: 10%;
+    top: 15%;
     width: fit-content;
     display: flex;
     align-items: center;
@@ -411,13 +411,4 @@ html, body {
 
 .art #ue5{
     transform: scale(1.2);
-}
-
-
-/*customize the go back button */
-.back__button{
-    position: relative;
-    height: 4rem;
-    width: 4rem;
-    background-color: #131313;
 }

@@ -252,17 +252,8 @@
     }
 
     .projects__section{
-        /* top:20%;
-        left: 10%;
-        bottom: 30%;
-        z-index: -1;
-        opacity: 0;
-        display: flex;
-        flex: row;
-        width: 80%;
-        height:70%; */
-        left: 7%;
-        width: 70%;
+        left: 5%;
+        width: 75%;
         height: 80%;
         top: 10%;
     }
@@ -276,6 +267,7 @@
         height: 26.5rem;
         margin-left: 1.0rem;
         margin-right: 0;
+        transform: scale(0.9);
     }
 
     .description p{
@@ -324,5 +316,351 @@
         overflow-x: hidden;
     }
 
+    .img__holder{
+        height: 60%;
+    }
 
+    .image__border{
+        left: 55.5%;
+        bottom: 66.5%;
+        width: 55%;
+        height: 55%;
+    }
+
+    .projects__section #back__button{
+        height: 4.5%;
+        transform: scale(1.5);
+        top: 1.3%;
+        right: 1.5%;
+    }   
+
+    .card__button{
+        top: 35%;
+    }
+
+    .project5 .card__button{
+        top: 40%;
+    }
+
+    .project1 .card__button{
+        top: 40%;
+    }
+
+    .skills__section{
+        top: 20%;
+        left: 7%;
+        height: 70%;
+        width: 70%;
+    }
+
+    .my__skills .languages{
+        margin-left: 1.4rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .my__skills .languages h1{
+        font-size: 1.7rem;
+        position: relative;
+        right:18%;
+        transform:translateY(1.0rem);
+    }
+
+    .languages .icon{
+        margin-left: 2rem;
+        transform: scale(8.0);
+        margin-top: 1.3rem;
+    }
+
+    .languages #css{
+        transform: scale(10.0);
+    }
+
+    .my__skills .libraries{
+        position: absolute;
+        left:55%;
+        top: 18.5%;
+    }
+
+    .libraries h1{
+        position: relative;
+        bottom: 100%;
+        font-size: 1.7rem;
+        transform: translateY(0.2rem);
+    }
+
+    .libraries .icon{
+        transform: scale(2.0);
+        margin-top: 0rem;
+    }
+
+    .libraries #pd{
+        transform: scale(4.0);
+        margin-left: 2rem;
+    }
+
+    .my__skills .frameworks__env{
+        top: 50%;  
+    }
+
+    .frameworks__env h1{
+        font-size: 1.5rem;
+    }
+
+    .frameworks__env .icon{
+        transform: scale(3.0);
+        margin-right: 1.5rem;
+    }
+
+    .frameworks__env #androidstudio{
+        margin-left: 1.5em;
+    }
+
+    .my__skills .art{
+        transform: translateY(2.0rem);   
+    }
+
+    .art .icon{
+        transform: scale(3.5);
+        margin-right: 3rem;
+    }
+
+    .art #ue5{
+        transform: scale(4.0);
+    }
+
+    .art #blender{
+        margin-left: 2rem;
+    }
+
+    .skills__section #back__button{
+        height: 7%;
+        transform: scale(1.3);
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
+
+@media all and (max-width:320px){
+    :root{
+        overflow-y: hidden;
+    }
+
+    .hero{
+        width: 320px;
+        top: 7%;
+    }
+
+    .hero .hero__heading{
+        position: relative;
+        top: 10%;
+        font-size: 2rem;
+    }
+
+    .start__button{
+        transform: scale(0.9);
+        right: 10%;
+        top: 0%;
+    }
+
+    .hero .background{
+        width: 60%;
+        height: 100%;
+    }
+
+    .dynamic__texts li{
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .search__section{
+        position: absolute;
+        left: 15%;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        bottom: 7%;
+        height: 45%;
+        justify-content: center;
+    }
+
+    .search__section .navigation__button{
+        transform: scale(1.0);
+        margin-left: 0;
+    }
+
+    .about__section{
+        left: 1.5%;
+        top: 10%;
+        width: 60%;
+    }
+
+    .about__section #content{
+        font-size: 1.0rem;
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+    }
+
+    .about__section #back__button{
+        height:4%;
+        transform: scale(1.5);
+    }
+
+
+    .about__section h1{
+        position: relative;
+        top: 0%;
+    }
+
+    .projects__section{
+        left: 2%;
+        height: 80%;
+        width: 60%;
+    }
+
+    .projects__section #title__and__button h1{
+        font-size: 2.0rem;
+    }
+
+    .projects__section #back__button{
+        z-index: 2;
+        height: 3%;
+        right: 7%;
+        top: 3%;
+        transform: scale(1.8);
+        margin: 0;
+    }
+
+    .card{
+        margin-left: 0rem;
+        width: 19.5rem;
+        height: 25rem;
+        right: 2%;
+    }
+
+    .project1 .description p{
+        font-size: 1.2rem;
+        transform: translateY(-1.8rem);
+    }
+
+    .project2 .description p{
+        font-size: 1.2rem
+    }
+
+    .project3 .description h1{
+        font-size: 1.6rem;
+    }
+
+    .project3 .description p{
+        font-size: 1.3rem;
+        top:5%;
+    }
+
+    .project4 .description h1{
+        font-size: 1.5rem;
+    }
+
+    .project5 .description h1{
+        font-size: 1.3rem;
+    }
+
+    .project5 .description p{
+        font-size: 1.2rem;
+    }
+
+    .img__holder{
+        width: 70%;
+        height: 60%;
+        transform: translateX(-1.3rem);
+
+    }
+
+    .image__border{
+        width: 60%;
+        height: 60%;
+        left: 46%;
+        bottom: 58%;
+    }
+
+    .card__button{
+        top: 45%;
+    }
+
+    .project1 .card__button{
+        top: 50%;
+        left: 20%;
+    }
+
+    .project3 .card__button{
+        top: 50%;
+    }
+
+    .project5 .card__button{
+        top: 45%;
+    }
+
+    .skills__section{
+        width: 60%;
+        left: 2%;
+        top: 10%;
+        height: 70%;
+    }
+
+    .my__skills .languages{
+        margin-left: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .my__skills .languages h1{
+        font-size: 1.7rem;
+        position: relative;
+        transform:translateY(0.5rem);
+    }
+
+    .languages .icon{
+        margin: 1.0rem;
+        padding: 0;
+        transform: scale(2.5);
+    }
+
+    .languages #css{
+        transform: scale(3.0);
+    }
+
+    .my__skills .libraries{
+        transform: translateY(-0.4rem);
+    }
+
+    .libraries .icon{
+        margin-right: 0.3rem;
+        transform: scale(4.0);
+    }
+
+    .libraries #pd{
+        transform: scale(7.0);
+    }
+
+    .my__skills .frameworks__env{
+        position: absolute;
+        top: 55%
+    }
+
+    .frameworks__env .icon{
+        transform: scale(4.0);
+    }
+
+    .art .icon{
+        transform: scale(4.5);
+    }
+
+    .art #ue5{
+        transform: scale(5.5);
+    }
+
+    .skills__section #back__button{
+        height: 6%;
+    }
 }
