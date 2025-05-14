@@ -192,6 +192,10 @@
     box-shadow: 0 0 0.9rem 0.2rem #009cff, inset 0 0 0.9rem 0.2rem #009cff;
 }
 
+.about__section::-webkit-scrollbar{
+    display: none;
+}
+
 
 .about__section #content{
     display: flex;
