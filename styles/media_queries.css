@@ -1,6 +1,3 @@
-
-
-
 @media all and (max-width: 1024px){ 
     .dynamic__texts li{
         list-style: none;
@@ -10,14 +7,7 @@
     }
 
     .about__section{
-        top: 15%;
-    }
-
-    .about__section #back__button{
-        margin: 1rem;
-        position: absolute;
-        width: 10%;
-        height: 10%;
+        top: 5%;
     }
 
     .description h1{
@@ -34,37 +24,54 @@
         width: 25rem;
         height: 28rem;
     }
-
-
-    .my__skills .libraries{
-        transform: translateY(-1rem);
+    .libraries .icon{
+        transform: scale(1.5);
+        margin-left: 1rem;
+    }
+    .libraries #pd{
+        transform: scale(2.0);
+        margin-left: 1rem;
     }
 
     .languages .icon{
+        transform: scale(4.0);
         margin-top: 1rem;
     }
 
+    
+    .languages #css{
+        transform: scale(4.5);
+        margin-top: 1rem;
+    }
+
+    .frameworks__env .icon{
+        transform: scale(1.5);
+        margin-left: 1rem;
+    }
+
     .art .icon{
+        margin-left: 1rem;
         transform: scale(1.3);
     }   
     .art #ue5{
         transform: scale(1.5);
     }
-
-    .skills__section #back__button{
-        /* position: relative;
-        width: 15%;
-        height: 15%;
-        background:#10c0e8; */
-        transform: scale(0.8);
-    }
 }
 
 @media all and (max-width:768px){
 
+    .about__section .back__button{
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .projects__section .back__button{
+        width: 3rem;
+        height: 3rem;
+    }
+
     .start__button{
         position:relative;
-        right: 5%;
         transform: translateY(-1.0rem);
     }
 
@@ -91,20 +98,6 @@
     .about__section{
         top: 5%;
     }
-
-    .about__section #back__button{
-        height: 5%;
-        width: 8%;
-        transform: scale(1.4);
-        top: 2%;
-        right: 3%;
-    }
-
-    .projects__section #back__button{
-        height: 8%;
-        transform: scale(1.1);
-    }
-
     .card__wrap{
         display: flex;
         flex-direction: row;
@@ -118,7 +111,7 @@
     }
 
     .description p{
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     .projects__section #title__and__button h1{
         font-size: 3rem;
@@ -127,87 +120,49 @@
     }
 
     .project1 .description p{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+    }
+
+    .project6 .description p{
+        font-size: 1.5rem;
     }
 
     .project2 .description p{
+        font-size: 1.5rem;
         transform: translateY(-1.5rem);
     }
 
     .project3 .description p{
+        font-size: 1.6rem;
         transform: translateY(-0.5rem);
+    }
+
+    .project4 .description h1{
+        font-size: 1.65rem;
     }
 
     .project4 .description p{
-        transform: translateY(-0.8rem);
+        transform: translateY(-2.8rem);
     }
 
     .project5 .description p{
-        transform: translateY(-1.0rem);
-    }
-
-    .languages .icon{
-        transform: scale(2.0);
-        margin-left: 1.3rem;
-    }
-
-    .languages #css{
-        /* transform: scale(2.5);
-        margin-left: 1.0rem; */
-        transform: scale(3.0);
-    }
-
-    .frameworks__env .icon{
-        margin-left: 1rem;
-        transform: scale(1.5);
-    }
-
-    .art .icon{
-        margin-left: 0;
-        transform: scale(1.5);
-    }
-
-    .art #blender{
-        margin-left: 1rem;
-    }
-
-    .art #ue5{
-        transform: scale(1.8);
-    }
-
-    .my__skills .libraries{  
-        transform: translateY(0.2rem);
-    }
-
-    .libraries .icon{
-        transform: scale(1.5);
-    }
-
-    .libraries #pd{
-        transform: scale(2.0);
-    }
-
-    .libraries #tf{
-        margin-left: 1rem;
-    }
-
-    .skills__section #back__button{
-        /* position: relative;
-        width: 15%;
-        height: 15%;
-        background:#10c0e8; */
-
-        height: 10%;
-        transform: scale(1.0);
-    }
-
-    .skills__section h1{
-        transform: translateY(-0.5rem);
+        font-size: 1.6rem;
+        transform: translateY(-2.0rem);
     }
 
 }
 
 @media all and (max-width: 425px){
+
+    .about__section .back__button{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .projects__section .back__button{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 
     .background{
         height: 100%;
@@ -215,6 +170,7 @@
 
     .search__section{
         display: flex;
+        left: -2%;
         flex-direction: column;
     }
 
@@ -222,71 +178,9 @@
         margin-top: 0rem;
     }
 
-    .about__section{
-        left: 7%;
-        top: 15%;
-    }
-
-    .about__section h1{
-        position: relative;
-        bottom: 3%;
-    }
-
-    .about__section #content{
-        font-size: 1.0rem;
-    }
-
-    .about__section #content #android{
-        margin: 0;
-    }
-
-    .about__section #content #webdev{
-        margin: 0;
-        transform: scale(0.8);
-    }
-
     .card__wrap{
         display: flex;
         flex-direction: column;
-    }
-
-    .description p{
-        font-size: 1.0rem;
-    }
-
-    .project1 .description p{
-        font-size: 1.1rem
-    }
-
-    .project2 .description p{
-        font-size: 1.2rem
-    }
-
-    .project3 .description h1{
-        font-size: 1.5rem;
-    }
-
-    .project3 .description p{
-        font-size: 1.3rem;
-        top:-5%;
-    }
-
-    .project4 .description h1{
-        font-size: 1.5rem;
-    }
-
-    
-    .project4 .description p{
-        font-size: 1.2rem;
-    }
-
-    .project5 .description h1{
-        font-size: 1.5rem;
-    }
-
-    .project5 .description p{
-        font-size: 1.2rem;
-        top: 3%;
     }
 
     .slider__container {
@@ -306,20 +200,6 @@
         width: 55%;
         height: 55%;
     }
-
-    .projects__section #back__button{
-        height: 4.5%;
-        transform: scale(1.5);
-        top: 1.3%;
-        right: 1.5%;
-    }   
-
-    .skills__section #back__button{
-        height: 7%;
-        transform: scale(1.3);
-        margin-right: 0.5rem;
-        margin-top: 0.5rem;
-    }
 }
 
 
@@ -337,45 +217,12 @@
         margin-top: 0rem;
     }
 
-    .about__section{
-        left: 1.5%;
-        top: 10%;
-        width: 60%;
-    }
-
-    .about__section #content{
-        font-size: 1.0rem;
-        font-weight: 700;
-        padding: 0;
-        margin: 0;
-    }
-
-    .about__section #back__button{
-        height:4%;
-        transform: scale(1.5);
-    }
-
-
-    .about__section h1{
-        position: relative;
-        top: 0%;
-    }
-
     .projects__section #title__and__button h1{
         font-size: 2.0rem;
     }
 
     .card__button{
-        top: 40%;
-    }
-
-    .projects__section #back__button{
-        z-index: 2;
-        height: 3%;
-        right: 7%;
-        top: 3%;
-        transform: scale(1.8);
-        margin: 0;
+        top: 50%;
     }
 }
 
@@ -387,26 +234,40 @@
         height: 25rem;
         right: 2%;
     }
-}
-
-@media all and (min-width:364px) and (max-width:418px) {
-    .card{
-        margin-left: 0rem;
-        left: 4%;
-        width: 18rem;
-        height: 25rem;
-        transform: scale(0.95);
-    }
 
     .project1 .description p{
-        font-size: 1.0rem;
+        transform: translateY(2.0rem);
+        font-size: 1.2rem;
+    }
+
+    .project1 .description h1{
+        transform: translateY(-1.0rem);
+        font-size: 1.7rem;
+    }
+
+    .description p{
+        font-size: 1.3rem;
+    }
+
+    .project2 .description p{
+        font-size: 1.3rem;
     }
 
     .project3 .description h1{
-    font-size: 1.4rem;
+        font-size: 1.4rem;
+    }
+
+    .project3 .description p{
+        font-size: 1.3rem;
     }
 
     .project4 .description h1{
+        transform: translateY(-0.4rem);
+        font-size: 1.4rem;
+    }
+
+    .project4 .description p{
+        transform: translateY(-2.0rem);
         font-size: 1.4rem;
     }
 
@@ -414,6 +275,78 @@
         position: relative;
         bottom: 35%;
         left: 4%;
+        font-size: 1.3rem;
+    }
+
+    .project5 .description p{
+        transform: translateY(-1.5rem);
+        font-size: 1.3rem;
+    }
+}
+
+@media all and (min-width:364px) and (max-width:418px) {
+    .card{
+        margin-left: 0rem;
+        left: 5%;
+        width: 18rem;
+        height: 25rem;
+        transform: scale(0.95);
+    }
+
+    .project1 .description p{
+        transform: translateY(2.0rem);
+        font-size: 1.2rem;
+    }
+
+    .project6 .description p{
+        transform: translateY(-1.0rem);
+        font-size: 1.2rem;
+    }
+
+    .project6 .description h1{
+        transform: translateY(-1.0rem);
+        font-size: 1.5rem;
+    }
+
+    .project1 .description h1{
+        transform: translateY(-1.0rem);
+        font-size: 1.7rem;
+    }
+
+    .description p{
+        font-size: 1.3rem;
+    }
+
+    .project2 .description p{
+        font-size: 1.3rem;
+    }
+
+    .project3 .description h1{
+        font-size: 1.4rem;
+    }
+
+    .project3 .description p{
+        font-size: 1.3rem;
+    }
+
+    .project4 .description h1{
+        transform: translateY(-0.4rem);
+        font-size: 1.4rem;
+    }
+
+    .project4 .description p{
+        transform: translateY(-2.0rem);
+        font-size: 1.4rem;
+    }
+
+    .project5 .description h1{
+        position: relative;
+        bottom: 35%;
+        left: 4%;
+        font-size: 1.3rem;
+    }
+
+    .project5 .description p{
         font-size: 1.3rem;
     }
 }
@@ -427,86 +360,130 @@
         transform: scale(0.85);
     }
 
-    .project1 .description h1{
-        font-size: 1.8rem;
-        position: relative;
-        bottom: 38%;
-        left: 5%;
+    .project1 .description p{
+        transform: translateY(2.0rem);
+        font-size: 1.2rem;
     }
 
-    .project3 .description h1{
+    .project6 .description p{
+        transform: translateY(-1.0rem);
+        font-size: 1.2rem;
+    }
+
+    .project6 .description h1{
+        transform: translateY(-1.0rem);
         font-size: 1.5rem;
-        position: relative;
-        bottom: 37%;
-        left: 5%;
     }
 
-    .project3 .card__button{
-        top: 50%;
+    .project1 .description h1{
+        transform: translateY(-1.0rem);
+        font-size: 1.7rem;
     }
 
-    .project5 .description h1{
+    .description p{
         font-size: 1.3rem;
     }
 
-    .project5 .card__button{
-        top: 48%;
+    .project2 .description p{
+        font-size: 1.3rem;
     }
 
+    .project3 .description h1{
+        font-size: 1.4rem;
+    }
 
+    .project3 .description p{
+        font-size: 1.3rem;
+    }
+
+    .project4 .description h1{
+        transform: translateY(-0.4rem);
+        font-size: 1.4rem;
+    }
+
+    .project4 .description p{
+        transform: translateY(-2.0rem);
+        font-size: 1.4rem;
+    }
+
+    .project5 .description h1{
+        position: relative;
+        bottom: 35%;
+        left: 4%;
+        font-size: 1.3rem;
+    }
+
+    .project5 .description p{
+        transform: translateY(-1.5rem);
+        font-size: 1.3rem;
+    }
 }
 
 @media all and (min-width:320px) and (max-width:350px) {
     .card{
         margin-left: 0rem;
         margin-bottom: 0rem;
-        left: -2%;
+        left: 0%;
         width: 18rem;
         height: 25rem;
         transform: scale(0.8);
     }
 
-    .project3 .card__button{
-        top: 45%;
+    .project1 .description p{
+        transform: translateY(2.0rem);
+        font-size: 1.2rem;
     }
 
-    .project5 .card__button{
-        top: 48%;
+    .project6 .description p{
+        transform: translateY(-1.4rem);
+        font-size: 1.25rem;
+    }
+    
+    .project6 .description h1{
+        transform: translateY(-1.0rem);
+        font-size: 1.5rem;
     }
 
     .project1 .description h1{
-        font-size: 1.8rem;
-        position: relative;
-        bottom: 40%;
-        left: 6%;
+        transform: translateY(-1.0rem);
+        font-size: 1.7rem;
     }
 
-    .project1 .description p{
-        position: relative;
-        bottom: 45%;
+    .description p{
+        font-size: 1.3rem;
     }
 
-    .project1 .card__button{
-        top: 50%;
+    .project2 .description p{
+        font-size: 1.3rem;
     }
 
     .project3 .description h1{
         font-size: 1.4rem;
-        position: relative;
-        bottom: 40%;
-        left: 7%;
+    }
+
+    .project3 .description p{
+        font-size: 1.3rem;
     }
 
     .project4 .description h1{
-        position: relative;
-        left: 4%;
+        transform: translateY(-0.4rem);
+        font-size: 1.4rem;
     }
 
-    .project4 .card__button{
-        top: 45%;
+    .project4 .description p{
+        transform: translateY(-2.0rem);
+        font-size: 1.4rem;
     }
 
     .project5 .description h1{
+        position: relative;
+        bottom: 35%;
+        left: 4%;
+        font-size: 1.3rem;
+    }
+
+    .project5 .description p{
+        transform: translateY(-1.5rem);
         font-size: 1.3rem;
     }
 }
@@ -554,74 +531,63 @@
     }
 
     .description p{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .project1 .description p{
-        font-size: 1.0rem;
+        font-size: 1.1rem;
+        transform: translateY(0.8rem);
+    }
+
+    .project6 .description p{
+        font-size: 1.2rem;
+        transform: translateY(-0.3rem);
+    }
+    .project6 .card__button{
+        top: 40%;
+    }
+
+    .project6 .description h1{
+        font-size: 1.5rem;
+    }
+
+    .project1 .card__button{
+        transform: translateY(1.0rem);
+    }
+
+    .project2 .description p{
+        font-size: 1.2rem;
     }
 
     .project3 .description h1{
     font-size: 1.4rem;
     }
+    .project3 .description p{
+    font-size: 1.35rem;
+    transform: translateY(-1.8rem);
+    }
 
     .project4 .description h1{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+    }
+
+    .project4 .description p{
+        font-size: 1.25rem;
+        transform: translateY(-1.5rem);
     }
 
     .project5 .description h1{
         position: relative;
         bottom: 35%;
         left: 4%;
-        font-size: 1.4rem;
-    }
-}
-
-/* @media all and (min-width:514px) and (max-width: 702px){
-
-    .card__wrap{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .slider__container{
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    .card{
-        left: 3%;
-        margin-left: 0rem;
-        width: 35rem;
-        height: 38rem;
-        right: 2%;
-    }
-
-    .description p{
-        font-size: 2rem;
-    }
-
-    .description h1{
-        font-size: 3rem;
-    }
-
-    .project1 .description p{
-        font-size: 2rem;
-    }
-
-    .project3 .description h1{
-        font-size: 2.5rem;
-    }
-
-    .project5 .description h1{
-        font-size: 2.4rem;
+        font-size: 1.3rem;
     }
 
     .project5 .description p{
-        position: relative;
-        top: -30%;
+        font-size: 1.3rem;
+        transform: translateY(-1.6rem);
     }
-} */
+}
 
 @media all and (max-width:1081px){
     
@@ -644,7 +610,6 @@
     }
 
     .start__button{
-        left: -4.5%;
         top: 50%;
     }
 
@@ -675,6 +640,7 @@
 @media all and (min-width:425px) and (max-width:565px){
     .search__section{
         display: flex;
+        left: -1.5%;
         flex-direction: column;
     }
 }
@@ -682,11 +648,42 @@
 
 
 /*skills section */
-@media all and (min-width:950px) and (max-width:992px){
-    .skills__section{
-        transform: scale(0.8);
+
+@media all and (min-width:1031px) and (max-width:1300px){
+    .languages .icon{
+        transform: scale(2.5);
+    }
+    .languages #css{
+        transform: scale(3.0);
     }
 }
+
+
+@media all and (min-width:1025px) and (max-width:1030px){
+    .languages .icon{
+        transform: scale(4.0);
+    }
+    .languages #css{
+        transform: scale(4.5);
+    }
+
+    .my__skills .libraries{
+        transform: translateY(-1.5rem);
+    }
+
+    .art .icon{
+        transform: scale(1.5);
+    }
+
+    .art #ue5{
+        transform: scale(2.0);
+    }
+
+    .frameworks__env .icon{
+        transform: scale(5.0rem);
+    }
+}
+
 
 @media all and (min-width:900px) and (max-width:950px){
     .skills__section{
@@ -694,24 +691,34 @@
     }
 }
 
-@media all and (min-width:750px) and (max-width:950px){
+@media all and (min-width:750px) and (max-width:774px){
     .skills__section{
         transform: scale(1.1);
     }
 
     .my__skills .languages{
         flex-wrap: wrap;
-        width: 60%;
+        width: 70%;
     }
 
     .languages .icon{
-        margin-left: 1rem;
-        margin-right: 2rem;
+        transform: scale(3.8);
+        margin-left: 2rem;
+        margin-right: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .languages #css{
+        transform: scale(5.5);
     }
 
     .my__skills .frameworks__env{
         position: absolute;
         top: 45%;
+    }
+
+    .frameworks__env .icon{
+        transform: scale(2.0);
     }
 
     .my__skills .libraries{
@@ -721,18 +728,84 @@
     }
 
     .libraries .icon{
-        transform: scale(2.0);
+        transform: scale(4.0);
         margin-right: 2rem;
     }
 
     .libraries #pd{
-        transform: scale(3.0);
+        transform: scale(4.8);
     }
 
     .skills__section{
         position: absolute;
         top: 15%;
         height: 70%;
+    }
+
+    .art .icon{
+        transform: scale(2.5);
+    }
+    .art #ue5{
+        transform: scale(3.5);
+    }
+}
+
+@media all and (min-width:774px) and (max-width:950px){
+    .skills__section{
+        transform: scale(1.1);
+    }
+
+    .my__skills .languages{
+        flex-wrap: wrap;
+        width: 70%;
+    }
+
+    .languages .icon{
+        transform: scale(2.8);
+        margin-left: 2rem;
+        margin-right: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .languages #css{
+        transform: scale(3.5) translateY(0.2rem);
+    }
+
+    .my__skills .frameworks__env{
+        position: absolute;
+        top: 45%;
+    }
+
+    .frameworks__env .icon{
+        transform: scale(1.5);
+    }
+
+    .my__skills .libraries{
+        position: absolute;
+        top: 23%;
+        left: 60%;
+    }
+
+    .libraries .icon{
+        transform: scale(2.5);
+        margin-right: 2rem;
+    }
+
+    .libraries #pd{
+        transform: scale(4.8);
+    }
+
+    .skills__section{
+        position: absolute;
+        top: 15%;
+        height: 70%;
+    }
+
+    .art .icon{
+        transform: scale(1.5);
+    }
+    .art #ue5{
+        transform: scale(2.0);
     }
 }
 
@@ -754,11 +827,11 @@
     .languages .icon{
         margin-left: 0rem;
         margin-right: 1rem;
-        transform: scale(1.5);
+        transform: scale(2.5);
     }
 
     .languages #css{
-        transform: scale(2.0);
+        transform: scale(3.0);
     }
 
     .my__skills .frameworks__env{
@@ -773,20 +846,21 @@
     }
 
     .libraries .icon{
-        transform: scale(2.0);
+        transform: scale(2.5);
         margin-right: 1rem;
     }
 
     .libraries #pd{
-        transform: scale(3.0);
+        transform: scale(3.5);
     }
 
     .art .icon{
-        transform: scale(1.0);
+        margin-right: 2rem;
+        transform: scale(2.0);
     }
 
     .art #ue5{
-        transform: scale(1.5);
+        transform: scale(2.5);
     }
 
 }
@@ -809,16 +883,20 @@
     .languages .icon{
         margin-left: 1rem;
         margin-right: 1rem;
-        transform: scale(2.0);
+        transform: scale(4.0);
     }
 
     .languages #css{
-        transform: scale(2.5);
+        transform: scale(4.5);
     }
 
     .my__skills .frameworks__env{
         position: absolute;
         top: 50%;
+    }
+
+    .frameworks__env .icon{
+        transform: scale(2.0);
     }
 
     .my__skills .libraries{
@@ -828,20 +906,21 @@
     }
 
     .libraries .icon{
-        transform: scale(2.0);
+        transform: scale(3.0);
         margin-right: 1rem;
     }
 
     .libraries #pd{
-        transform: scale(3.0);
+        transform: scale(4.0);
     }
 
     .art .icon{
-        transform: scale(1.5);
+        margin-right: 3rem;
+        transform: scale(2.0);
     }
 
     .art #ue5{
-        transform: scale(2.0);
+        transform: scale(2.5);
     }
 
 }
@@ -864,16 +943,20 @@
     .languages .icon{
         margin-left: 1rem;
         margin-right: 0rem;
-        transform: scale(1.5);
+        transform: scale(2.5);
     }
 
     .languages #css{
-        transform: scale(2.0);
+        transform: scale(3.0);
     }
 
     .my__skills .frameworks__env{
         position: absolute;
         top: 50%;
+    }
+
+    .frameworks__env .icon{
+        transform: scale(2.0);
     }
 
     .my__skills .libraries{
@@ -883,25 +966,26 @@
     }
 
     .libraries .icon{
-        transform: scale(3.0);
-        margin-right: 1rem;
+        transform: scale(6.0);
+        margin-right: 2rem;
     }
 
     .libraries #pd{
-        transform: scale(4.0);
+        transform: scale(10.0);
     }
 
     .art .icon{
-        transform: scale(1.5);
+        margin-right: 2rem;
+        transform: scale(2.5);
     }
 
     .art #ue5{
-        transform: scale(2.0);
+        transform: scale(3.0);
     }
 
 }
 
-@media all and (min-width:426px) and (max-width:520px){
+@media all and (min-width:426px) and (max-width:521px){
     
     .skills__section{
         position: absolute;
@@ -918,12 +1002,12 @@
 
     .languages .icon{
         margin-left: 1rem;
-        margin-right: 0rem;
-        transform: scale(2.05);
+        margin-right: 1rem;
+        transform: scale(4.0);
     }
 
     .languages #css{
-        transform: scale(2.5);
+        transform: scale(4.5);
     }
 
     .my__skills .frameworks__env{
@@ -938,11 +1022,12 @@
     }
 
     .libraries .icon{
-        margin-right: 0.5rem;
+        transform: scale(5.0);
+        margin-right: 0rem;
     }
 
     .libraries #pd{
-        transform: scale(1.2);
+        transform: scale(1.5) translateY(-0.3rem);
     }
 
     .libraries #tf{
@@ -950,29 +1035,36 @@
     }
 
     .frameworks__env .icon{
-        transform: scale(3.0);
+        transform: scale(3.5);
         margin-right: 1.5rem;
     }
     
 
     .art .icon{
-        transform: scale(3.0);
+        transform: scale(3.5);
         margin-right: 2.0rem;
+        margin-top: 0.8rem;
     }
 
     .art #ue5{
-        transform: scale(3.5);
+        transform: scale(4.5);
     }
 
 }
 
-@media all and (min-width:383px) and (max-width:425px){
+@media all and (min-width:383px) and (max-width:426px){
     .skills__section{
         position: absolute;
         left: 5%;
         top: 20%;
         width: 90%;
         height: 68%;
+    }
+
+    .skills__section .back__button{
+        position: relative;
+        width: 3rem;
+        height: 3rem;
     }
 
     .my__skills .languages{
@@ -1005,11 +1097,11 @@
 
     .libraries .icon{
         margin-right: 1rem;
-        transform: scale(2.0);
+        transform: scale(6.0);
     }
 
     .libraries #pd{
-        transform: scale(4.0);
+        transform: scale(9.0);
     }
 
     .my__skills .frameworks__env{
@@ -1017,21 +1109,22 @@
         top: 45%
     }
 
+    .my__skills .frameworks__env h1{
+        font-size: 1.5rem;
+    }
+
     .frameworks__env .icon{
-        transform: scale(2.5);
+        margin-right: 1.0rem;
+        transform: scale(3.5);
     }
 
     .art .icon{
-        transform: scale(3.0);
+        transform: scale(4.0);
         margin-right: 2.0rem;
     }
 
     .art #ue5{
-        transform: scale(3.5);
-    }
-
-    .skills__section #back__button{
-        height: 6%;
+        transform: scale(4.5);
     }
 }
 
@@ -1054,11 +1147,11 @@
     .languages .icon{
         margin-left: 1rem;
         margin-right: 0rem;
-        transform: scale(1.5);
+        transform: scale(2.5);
     }
 
     .languages #css{
-        transform: scale(2.0);
+        transform: scale(3.0);
     }
 
     .my__skills .frameworks__env{
@@ -1077,26 +1170,26 @@
     }
 
     .libraries #pd{
-        transform: scale(1.5);
+        transform: scale(2.0);
     }
 
     .libraries #tf{
-        transform: scale(1.0) translateY(-0.6rem);
+        transform: scale(1.5) translateY(-0.4rem);
     }
 
     .frameworks__env .icon{
-        transform: scale(4.0);
+        transform: scale(7.0);
         margin-right: 1.5rem;
     }
     
 
     .art .icon{
-        transform: scale(5.0);
+        transform: scale(8.0);
         margin-right: 3.0rem;
     }
 
     .art #ue5{
-        transform: scale(5.5);
+        transform: scale(9.5);
     }
 
 }
@@ -1121,15 +1214,16 @@
     .languages .icon{
         margin-left: 1rem;
         margin-right: 0rem;
-        transform: scale(2.0);
+        transform: scale(3.0);
     }
 
     .languages #css{
-        transform: scale(2.3);
+        transform: scale(3.5);
     }
 
     .my__skills .frameworks__env{
         position: absolute;
+        left: 10%;
         top: 50%;
     }
 
@@ -1144,26 +1238,45 @@
     }
 
     .libraries #pd{
-        transform: scale(1.8);
+        transform: scale(2.0);
     }
 
     .libraries #tf{
-        transform: scale(1.1) translateY(-0.6rem);
+        transform: scale(1.5) translateY(-0.2rem);
     }
 
     .frameworks__env .icon{
-        transform: scale(6.0);
+        transform: scale(12.0);
         margin-right: 1.5rem;
+    }
+
+    .frameworks__env h1{
+        transform: translateX(-1.0rem);
+        font-size: 1.4rem;
     }
     
 
     .art .icon{
-        transform: scale(7.0);
+        margin-top: 1rem;
+        transform: scale(15.0);
         margin-right: 3.0rem;
     }
 
     .art #ue5{
-        transform: scale(7.5);
+        transform: scale(18.0);
     }
 
+}
+
+
+
+/*Back__button */
+@media all and (min-width:320px) and (max-width:425px) {
+
+    .skills__section .back__button{
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+    }
+    
 }

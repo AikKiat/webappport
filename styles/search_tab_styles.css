@@ -31,12 +31,24 @@
     position: relative;
 
     border: 0.2rem solid #131313;
-    overflow: hidden;
+    opacity: 0;
+    z-index: -1;
+
+    animation: squishButton 1s linear infinite;
+    animation-play-state: paused;
+    
+}
+
+.search__section .navigation__button .navi__button__border{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color:transparent;
+    height: 100%;
+    width: 100%;
 
     animation: clickGlowEffect 3s linear forwards;
     animation-play-state: paused;
-    opacity: 0;
-    
 }
 
 .search__section .navigation__button::after{
@@ -135,6 +147,6 @@
     }
 }
 
-.search__section{
+    .search__section{
     opacity: 1;
 }

@@ -17,6 +17,8 @@
 <body class="CRT__monitor__theme">
     <div id="monitor">
         <div id="screen">
+            <div class="flicker__effect"></div>
+            <div class="flash__filter"></div>
             <div id="crt">
                 <div class="scanline"></div>
                 <div class="terminal"></div>
@@ -37,28 +39,74 @@
                     </div>  
                 </section>
 
-                <section class="about__section">
+                <section class="about__whole">
+                    <section class="about__section">
                     <div id="content">
                         <h1>About me</h1>
+                        <div class="profile__photo">
+                            <img src="images/project_images/photo.jpg">
+                        </div>
                         <p>I am Thng Aik Kiat, currently a Year 2 student at SUTD, Computer Science and Design. 
-                            Since learning python back in 2016, I have picked various meaningful nougats of knowledge in the ever expansive
-                            field of Coding and Computer Science. My passion lies primarily in frontend App <img id="android" src="images/icons/androidstudio.png"> / Web dev <img id="webdev" src="images/icons/webdev.png">, as well as AI and its applications 
-                            especially regarding Computer Vision and Machine Learning for Data Analytics, and finally a longtime interest of mine also currently pursuing 
-                            in my university courses as well - Cybersecurity. Here are some of my more recent milestones, in chronological order:
+                            Since learning python back in 2016, programming has always been a centerpiece of my life.<br/> My passion lies primarily in frontend App <img id="android" src="images/icons/androidstudio.png"> 
+                            / Web dev <img id="webdev" src="images/icons/webdev.png">, as well as AI and its applications 
+                            especially regarding Computer Vision and <img id="machine__learning" src="images/icons/ml.png"> AI Applications in my software projects. Know more about them in the Projects Section!
                         </p>
                         <p>I am currently pursuing these courses for extra learning:</p>
                         <ul>
-                            <li>Intro to LLMs and Langchain</li>
-                            <li>Cybersecurity Course</li>
+                            <li>Intro to LLMs and Langchain <a id="course__link" href="https://www.udemy.com/course/complete-generative-ai-course-with-langchain-and-huggingface/?couponCode=CP130525">Course Link</a></li>
+                            <li>SQL Course <a id="course__link" href="https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/">Course Link</a></li>
                         </ul>
-                        <p>My other side hobbies include realistic 3D Character Art using Zbrush, and making cool stuff in Unreal Engine 5</p>
+                        <p>My other side hobbies include realistic 3D Character Art using Zbrush, and creating 3D Digital models renders in Blender and Unreal Engine 5</p>
                     </div>
-                    <button id="back__button" onclick="toggle('about')">
+                    <button class="back__button" onclick="toggle('about')">
                         <div class="cross">
                             <span id="cross__1"></span>
                             <span id="cross__2"></span>
                         </div>
                     </button>
+                </section>   
+                    <div class="Connect">
+                            <a href="https://github.com/AikKiat">
+                                <button><img src="images/project_images/github.PNG" id="github"></button>
+                            </a>
+                            <button class="resume" onclick="downloadResume()">Resume</button>
+                            <a href="https://www.linkedin.com/in/thng-aik-kiat-535a2732a/">
+                                <button><img src="images/project_images/linkedin.PNG" id="linkedin"></button>
+                            </a>
+                        </div> 
+                </section>
+                <section class="about__section">
+                    <div id="content">
+                        <h1>About me</h1>
+                        <div class="profile__photo">
+                            <img src="images/project_images/photo.jpg">
+                        </div>
+                        <p>I am Thng Aik Kiat, currently a Year 2 student at SUTD, Computer Science and Design. 
+                            Since learning python back in 2016, programming has always been a centerpiece of my life.<br/> My passion lies primarily in frontend App <img id="android" src="images/icons/androidstudio.png"> 
+                            / Web dev <img id="webdev" src="images/icons/webdev.png">, as well as AI and its applications 
+                            especially regarding Computer Vision and <img id="machine__learning" src="images/icons/ml.png"> AI Applications in my software projects. Know more about them in the Projects Section!
+                        </p>
+                        <p>I am currently pursuing these courses for extra learning:</p>
+                        <ul>
+                            <li>Intro to LLMs and Langchain <a id="course__link" href="https://www.udemy.com/course/complete-generative-ai-course-with-langchain-and-huggingface/?couponCode=CP130525">Course Link</a></li>
+                            <li>SQL Course <a id="course__link" href="https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/">Course Link</a></li>
+                        </ul>
+                        <p>My other side hobbies include realistic 3D Character Art using Zbrush, and creating 3D Digital models renders in Blender and Unreal Engine 5</p>
+                    </div>
+                    <button class="back__button" onclick="toggle('about')">
+                        <div class="cross">
+                            <span id="cross__1"></span>
+                            <span id="cross__2"></span>
+                        </div>
+                    </button>
+                    <div class="Connect">
+                        <a href="https://github.com/AikKiat">
+                            <button><img src="images/project_images/github.PNG" id="github"></button>
+                        </a>
+                        <a href="https://www.linkedin.com/in/thng-aik-kiat-535a2732a/">
+                            <button><img src="images/project_images/linkedin.PNG" id="linkedin"></button>
+                        </a>
+                    </div>
                 </section>
                 <div class="projects__section">
                     <div class="projects__section__border">
@@ -66,11 +114,12 @@
                     <section class="projects__container">
                     <div id="title__and__button">
                         <h1>Key Projects</h1>
-                        <button id="back__button" onclick="toggle('projects')">
+                        <button class="back__button" onclick="toggle('projects')">
                             <div class="cross">
                                 <span id="cross__1"></span>
                                 <span id="cross__2"></span>
                             </div>
+                            <div class="back__button__border"></div>
                         </button>
                     </div>
                     <div class="slider__container">
@@ -78,16 +127,15 @@
                         <div class="card">
                             <div class="project1" id="project__Card">
                                 <div class="img__holder">
-                                    <img id="project__image" src="images/project_images/smarthealth.png">
-                                    
+                                    <img id="project__image" src="images/project_images/smarthealth2.PNG">  
                                 </div>
                                 <div class="image__border"></div>
                                 <div class="description">
                                     <h1>SmartHealth</h1>
                                     <p>All in one HealthTech 
-                                        app people in their 50s - 60s and caregivers of the elderly. Includes realtime food nutrient analyser, 
-                                        medicinal package detail abstraction, on the fly in-house AI chatbot, 
-                                        calender and intake scheduling system, and a live medical centre finder with directions for the fastest route. </p>
+                                        app for people in their 50s - 60s and caregivers of the elderly. Realtime food nutrient and 
+                                        medicinal package details analysis using Computer Vision, in-house AI chatbot, 
+                                        intake scheduling system, and a live medical centre finder with directions for the fastest route. </p>
                                 </div>
                                 <a href="https://github.com/ItsMeOX/SmartHealth">
                                     <button class="card__button">Learn More</button>
@@ -117,7 +165,7 @@
                         <div class="card">
                             <div class="project3" id="project__Card">
                                 <div class="img__holder">
-                                    <img id="project__image" src="images/project_images/nlpproject.PNG">
+                                    <img id="project__image" src="images/project_images/FRED.PNG">
                                     
                                 </div>
                                 <div class="image__border"></div>
@@ -127,7 +175,7 @@
                                         Inspiration: applying computer vision for meaningful, helpful and practical uses.</p>
                                     
                                 </div>
-                                <a href="#">
+                                <a href="https://github.com/AikKiat/ObjectDetect-Test">
                                     <button class="card__button">Learn More</button>
                                 </a>
                                 <div class="project__card__border"></div>
@@ -170,6 +218,25 @@
                                 <div class="project__card__border"></div>
                             </div>
                         </div>
+
+                        <div class="card">
+                            <div class="project6" id="project__Card">
+                                <div class="img__holder">
+                                    <img id="project__image" src="images/project_images/hacking.jpg">
+                                </div>
+                                <div class="image__border"></div>
+                                <div class="description">
+                                    <h1>SUTD What-The-Hack 2024</h1>
+                                    <p>SUTD'S Annual Hackathon. As a team of 4, our AI product created within 48 hours, detects recyclables utilizing 
+                                        an existing model with >90% confidence rate. Using OpenCV for image analysis and Tensorflow,
+                                         we can pass the results to a physical Arduino board. </p>
+                                </div>
+                                <a href="https://github.com/AikKiat/-WTH2024-GreenLoop-Smart-Recyclables-Sorting">
+                                    <button class="card__button">Learn More</button>
+                                </a>
+                                <div class="project__card__border"></div>
+                            </div>
+                        </div>
                     </div>
                     </div>
                     </section>
@@ -186,13 +253,13 @@
                                     <img src="images/icons/css.png" id="css" class="icon">
                                     <img src="images/icons/JavaScript-logo.png" id="js" class="icon">
                                 </div>
-                                <div class="libraries">
+                                <!-- <div class="libraries">
                                     <h1>Libraries</h1>
                                     <div>
                                         <img src="images/icons/tensroflow.png" id="tf" class="icon">
                                         <img src="images/icons/pandas.png" id="pd" class="icon">
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         <div class="frameworks__env">
                             <h1>Frameworks, and Development Environments</h1>
@@ -210,7 +277,7 @@
                         </div>
                         </div>
                     </div>
-                    <button id="back__button" onclick="toggle('skills')">
+                    <button class="back__button" onclick="toggle('skills')">
                         <div class="cross">
                             <span id="cross__1"></span>
                             <span id="cross__2"></span>
@@ -224,18 +291,20 @@
                             <div class="line__inner">
                             </div>
                         </div>
+                        <div class="navi__button__border"></div>
                     </button>
                     <button class="navigation__button" id="projects" onclick="toggle('projects')">Projects
                         <div class="line__outer">
-                            <div class="line__inner">
-                            </div>
+                            <div class="line__inner"></div>
                         </div>
+                        <div class="navi__button__border"></div>
                     </button>
                     <button class="navigation__button" id="skills" onclick="toggle('skills')">Skills
                         <div class="line__outer">
                             <div class="line__inner">
                             </div>
                         </div>
+                        <div class="navi__button__border"></div>
                     </button>
                 </section>
             </div>
