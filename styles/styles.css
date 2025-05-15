@@ -21,6 +21,43 @@
     --clr-outer: #009cff;
 }
 
+.footnote{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    margin-bottom: 1rem;
+
+}
+
+.footnote #icon{
+    margin-right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.footnote .css{
+    margin-left: 0.5rem;
+    transform: scale(1.5);
+}
+
+.footnote .html5{
+    position: relative;
+    transform: scale(1.45);
+}
+
+.footnote .js{
+    margin-right: 0rem;
+    transform: translateY(0.2rem);
+}
+
+.footnote #header{
+    font-size: 2.0rem;
+    color:#fff;
+}
+
 .inner__container{
     /*using flexbox, the flex direction matters. To align items along the main axis
     there is justify content. To align along the cross axis there is align-items, align-content
