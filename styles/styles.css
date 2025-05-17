@@ -39,13 +39,13 @@
 }
 
 .footnote .css{
-    margin-left: 0.5rem;
-    transform: scale(1.5);
+    transform: scale(1.6);
 }
 
 .footnote .html5{
+    margin-left: 0.5rem;
     position: relative;
-    transform: scale(1.45);
+    transform: scale(1.4);
 }
 
 .footnote .js{

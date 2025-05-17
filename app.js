@@ -47,7 +47,7 @@ function controlTextCaret(textCaret, timeout){
 
 
 //add dynamic autotyping text function
-dynamicTexts = ["I am Aik Kiat, SUTD CSD", "Software Engineering", "Frontend Web Dev Geek", "AI-Applications Enthusiast"];
+dynamicTexts = ["I am Aik Kiat, SUTD CSD", "Software Engineering", "Frontend Developer", "AI-Applications Enthusiast"];
 const autotypeTextUl = document.querySelector(".dynamic__texts");
 const heroTextCaret = "<span class='hero__caret' id='caret'></span>"; //caretElement
 

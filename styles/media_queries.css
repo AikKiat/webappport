@@ -210,6 +210,7 @@
 
     .footnote{
         position: relative;
+        top:90%;
         transform: scale(0.8);
     }
 
