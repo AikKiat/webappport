@@ -59,6 +59,17 @@
 }
 
 @media all and (max-width:768px){
+
+    .about__box__wrapper .row{
+        flex-wrap: wrap;
+    }
+
+    .about__box{
+        flex-basis: 100%;
+    }
+
+
+
     .footnote{
         transform: scale(0.8) translateX(10%) translateY(30%);
     }
@@ -208,9 +219,33 @@
 
 @media all and (min-width:320px) and (max-width:425px) {
 
+    .Connect{
+        right: 0%;
+    }
+
+    .about__section{
+        padding: 0rem;
+    }
+
+    .about__box__wrapper .row{
+        gap: 1rem;
+
+    }
+
+    .about__box__wrapper{
+        padding: 0rem;
+        gap: 1rem;
+    }
+
+    .about__box{
+        padding: 0rem;
+        font-size: 1.5rem;
+    }
+
+
     .footnote{
         position: relative;
-        top: 90%;
+        top: 93%;
         left: 0%;
         transform: scale(0.8);
     }

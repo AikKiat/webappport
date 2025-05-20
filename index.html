@@ -48,21 +48,89 @@
                 <section class="about__whole">
                     <section class="about__section">
                     <div id="content">
-                        <h1>About me</h1>
-                        <div class="profile__photo">
-                            <img src="images/project_images/photo.jpg">
+                        <div id="profile">
+                                    <h1>About me</h1>
+                                    <div class="profile__photo">
+                                        <img src="images/project_images/photo.jpg">
+                                    </div>
+                                </div>
+                        <div class="about__box__wrapper">
+                            <div class="row">
+                                <div class="about__box" id="education">
+                                    <span class="about__box__cover"></span>
+                                <p>I am Thng Aik Kiat, currently a Year 2 student at SUTD, Computer Science and Design.</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="about__box" id="key__milestones">
+                                    <span class="about__box__cover"></span>
+                                    <p>Tracks:</p>
+                                    <li>Software Engineering</li>
+                                    <li>Minor in Artificial Intelligence</li>
+                                </div>
+
+                                <div class=" about__box" id="current__endeavours">
+                                    <span class="about__box__cover"></span>
+                                    <p>Current Endeavours:</p>
+                                    <ul>
+                                        <li>Building a Fullstack App for one of SUTD's Client Partners as part of curriculum.</li>
+                                        <li>CodeEXP Hackathon, building an app for Crisis Management or Detection of Scams.</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="about__box" id="background">
+                                    <span class="about__box__cover"></span>
+                                <p>Programming Background:</p>
+                                <ul>
+                                    <li>Learned Python since 2016.</li>
+                                    <li>Frontend App <img id="android" src="images/icons/androidstudio.png"> / Web dev <img id="webdev" src="images/icons/webdev.png"></li>
+                                    <li>Exploring AI applications in software projects.</li>
+                                </ul>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="about__box" id="additional_learning">
+                                    <span class="about__box__cover"></span>
+                                <p>Taking these courses for extra learning:</p>
+                                <ul>
+                                    <li>Intro to LLMs and Langchain <a id="course__link" href="https://www.udemy.com/course/complete-generative-ai-course-with-langchain-and-huggingface/?couponCode=CP130525">Course Link</a></li>
+                                    <li>MySQL for Data Analytics and Business Intelligence <a id="course__link" href="https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/">Course Link</a></li>
+                                    <li>Building Scalable Java Microservices with Spring Boot, Spring Cloud <a id="course__link" href="https://www.coursera.org/learn/google-cloud-java-spring/">Course Link</a></li>
+                                </ul>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="about__box" id="leadership">
+                                    <span class="about__box__cover"></span>
+                                    <p>Leadership:</p>
+                                    <br/>
+                                    <p>President, Unreal Enthusiasts Interest Group</p>
+                                    <ul>
+                                        <li>Led workshops on 3D Digital Art, VR and Animation.</li>
+                                        <li>Hosted Projects during key events such as Open House.</li>
+                                    </ul>
+                                    <br/>
+                                    <p>University Ambassador</p>
+                                    <ul>
+                                        <li>Conducted School tours for visitors during Open House.</li>
+                                        <li>Consultant for candidates' enquiries during SUTD Admissions Interview.</li>
+                                        <li>Welcomed potential students during for Offer Receptions.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="about__box">
+                                    <span class="about__box__cover"></span>
+                                    <p>If you ever need someone to contribute in creating user-centric designs or empower software applications with AI, I'm sure I can help you! <img  id="emoji" src="images/icons/grinning.png"></p>
+                                </div>
+                            </div>
                         </div>
-                        <p>I am Thng Aik Kiat, currently a Year 2 student at SUTD, Computer Science and Design. 
-                            Since learning Python back in 2016, programming has always been a centerpiece of my life.<br/> My passion lies primarily in frontend App <img id="android" src="images/icons/androidstudio.png"> 
-                            / Web dev <img id="webdev" src="images/icons/webdev.png">, as well as AI applications in my software projects. If you ever need someone to contribute in creating user-centric 
-                            designs or empower software applications with AI, I'm sure I can help you! <img src="images/icons/grinning.png" id="emoji">
-                        </p>
-                        <p>Knowing the indispensable importance of Machine Learning <img id="machine__learning" src="images/icons/ml.png"> and Data Analytics to the development of AI, am currently taking these courses for extra learning:</p>
-                        <ul>
-                            <li>Intro to LLMs and Langchain <a id="course__link" href="https://www.udemy.com/course/complete-generative-ai-course-with-langchain-and-huggingface/?couponCode=CP130525">Course Link</a></li>
-                            <li>MySQL for Data Analytics and Business Intelligence <a id="course__link" href="https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/">Course Link</a></li>
-                        </ul>
-                        <p>My other side hobbies include realistic 3D Character Art using Zbrush, and creating 3D Digital models renders in Blender and Unreal Engine 5.</p>
                     </div>
                     <button class="back__button" onclick="toggle('about')">
                         <div class="cross">
@@ -70,16 +138,16 @@
                             <span id="cross__2"></span>
                         </div>
                     </button>
-                    </section>   
+                    </section> 
                     <div class="Connect">
-                            <a href="https://github.com/AikKiat">
-                                <button><img src="images/project_images/github.PNG" id="github"></button>
-                            </a>
-                            <button class="resume" onclick="downloadResume()">Resume</button>
-                            <a href="https://www.linkedin.com/in/thng-aik-kiat-535a2732a/">
-                                <button><img src="images/project_images/linkedin.PNG" id="linkedin"></button>
-                            </a>
-                        </div> 
+                        <a href="https://github.com/AikKiat">
+                        <button><img src="images/project_images/github.PNG" id="github"></button>
+                        </a>
+                        <button class="resume" onclick="downloadResume()">Resume</button>
+                        <a href="https://www.linkedin.com/in/thng-aik-kiat-535a2732a/">
+                        <button><img src="images/project_images/linkedin.PNG" id="linkedin"></button>
+                        </a>
+                    </div>
                 </section>
                 <div class="projects__section">
                     <div class="projects__section__border">

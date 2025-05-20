@@ -86,6 +86,37 @@ setTimeout(() => {
 }, 6000);
 
 
+function initialiseIntersectionObserver(){
+    //animating when coming into view:
+    let aboutBoxAll = document.querySelectorAll(".about__box")
+    console.log(aboutBoxAll);
+
+    const observer = new IntersectionObserver((entries)=>{
+        for(let i = 0; i < entries.length; i++)
+        {
+            if(entries[i].isIntersecting){
+                observer.unobserve(entries[i].target)
+                entries[i].target.style.opacity=1;
+                let elementCover = entries[i].target.querySelector(".about__box__cover")
+                setTimeout(() => {
+                    elementCover.style.opacity = 0;
+                    elementCover.style.zIndex = -1;
+                    entries[i].target.classList.add('animate');
+
+                }, 1000);
+                setTimeout(() => {
+                    entries[i].target.style.animationPlayState = "paused";
+                }, 3900);
+            }
+        }
+    }, {threshold:1.0});
+    
+    for(let i = 0; i < aboutBoxAll.length; i++)
+    {
+        observer.observe(aboutBoxAll[i]);
+    }
+}
+
 
 
 //pressing Start button, spawn the rest of the page
@@ -200,8 +231,21 @@ function switchViews(sectionName){
         const aboutOpacity = window.getComputedStyle(aboutSection).opacity;
         const aboutwhole = document.querySelector('.about__whole');
         const aboutwo = window.getComputedStyle(aboutwhole).opacity;
+        const aboutBoxAll = document.querySelectorAll(".about__box");
+        const aboutBoxCoverAll = document.querySelectorAll(".about__box__cover");
+
+        initialiseIntersectionObserver();
         if(aboutOpacity == 1)
         {
+            aboutBoxAll.forEach((aboutBox) =>{
+                aboutBox.style.animationPlayState = "running";
+                aboutBox.classList.remove('animate');
+                aboutBox.style.opacity = 0;
+            });
+            aboutBoxCoverAll.forEach((aboutBoxCover) =>{
+                aboutBoxCover.style.opacity = 1;
+                aboutBoxCover.style.zIndex = 1;
+            })
             console.log("over here!!!");
             aboutSection.style.opacity = 0;
             aboutSection.style.zIndex = -1;
@@ -257,3 +301,4 @@ function downloadResume(){
     const fileLink = "https://drive.google.com/file/d/1eoFZH2_LDuVrmVGw4mqAE2y6sHGUSbY0/view?usp=drive_link";
     location.href = fileLink;
 }
+

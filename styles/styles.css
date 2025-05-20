@@ -19,6 +19,8 @@
 
     --clr-inner: #10c0e8;
     --clr-outer: #009cff;
+
+    --gradient-angle:0deg;
 }
 
 .footnote{
@@ -214,25 +216,21 @@
     opacity: 0;
 
     position:absolute;
-    left: 10%;
-    top: 5%;
-    height: 70%;
-    width: 80%;
-    background: #13131332;
+    height: 80%;
+    width: fit-content;
+    background: #131313;
     border: 0.3rem dashed #131313;
     display: flex;
     flex-direction: row;
     padding: 2rem;
     color: #fff;
     overflow-y: auto;
-
     box-shadow: 0 0 0.9rem 0.2rem #009cff, inset 0 0 0.9rem 0.2rem #009cff;
 }
 
 .about__section::-webkit-scrollbar{
     display: none;
 }
-
 /* hide page scrollbar */
 html { scrollbar-width: none; } /* Firefox */
 body { -ms-overflow-style: none; } /* IE and Edge */
@@ -255,10 +253,10 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     min-height: fit-content;
 }
 
-#content .profile__photo{
+.profile__photo{
     position: relative;
-    width: min(14rem, 100%);
-    height: min(15rem,80%);
+    width: min(18rem, 100%);
+    height: min(25rem,80%);
     /* background-image: url("../images/project_images/photo.jpg"); */
     /* Add border-radius if you want rounded corners */
     border-radius: 0.5rem;
@@ -274,8 +272,121 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     
 }
 
+/*focus on the about box wrapper, and the boxes themselves.*/
+#content #profile{
+    height: 20rem;
+    width: 15rem;
+    background:#131313;
+}
+
+
+.about__box__wrapper{
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about__box__wrapper .row{
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+.about__box{
+    position: relative;
+    padding: 2rem;
+    width: 100%;
+    height: fit-content;
+    background: #131313;
+    border:0.3rem solid #131313;
+    flex: 1;
+    opacity: 0;
+    animation-play-state: paused;
+}
+
+#profile_container{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    border: 10px solid #009cff;
+}
+
+.about__box span{
+    position: relative;
+    background:#131313;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 1;
+}
+
+.about__box span::after{
+    z-index:-1;
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    transform: translateX(-0.5rem) translateY(-0.5rem);
+    background: conic-gradient(#00eeff, transparent var(--gradient-angle));
+    filter: blur(0.1rem);
+
+
+    animation: aboutBoxBorderTrace 0.8s ease-in-out infinite;
+}
+
+@property --gradient-angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes aboutBoxBorderTrace{
+    0%{
+        --gradient-angle:0deg;
+    }
+
+    100%{
+        --gradient-angle:360deg;
+    }
+}
+
+.animate{
+    animation: aboutBoxshadowVisibility 3s linear infinite;
+}
+
+
+@keyframes aboutBoxshadowVisibility{
+    0%{
+    }
+    10%{
+        box-shadow: 0 0 0.5rem #10c0e8, 0 0 2rem #10c0e8, 0 0 5rem #10c0e8;
+    }
+    33%{
+        box-shadow: 0 0 0.5rem #10c0e8, 0 0 1rem #10c0e8, 0 0 7rem #10c0e8;
+    }
+    60%{
+        box-shadow: 0 0 0.5rem #10c0e8, 0 0 1rem #10c0e8, 0 0 7rem #10c0e8;
+    }
+    66%{
+        box-shadow: 0 0 0.5rem #10c0e8, 0 0 2rem #10c0e8, 0 0 5rem #10c0e8;  
+    }
+    100%{
+        box-shadow: 0 0 0.9rem 0.2rem #00ffd5, 0 0 0.9rem 0.2rem #00eeff;
+    }
+}
+
+
+
 #content #emoji{
-    transform: translateY(0.4rem);
+    /* transform: translateY(0.4rem); */
     width: 2rem;
     height: 2rem;
 }
@@ -329,11 +440,10 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
 .Connect{
     z-index: 0;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    position: relative;
-    left: 0%;
-    top: 70%;
+    position: absolute;
+    bottom: 0%;
+    justify-content: center;
     width: 100%;
     height: 10rem;
     overflow: hidden;
@@ -351,17 +461,6 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     width: 100%;
     height: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
