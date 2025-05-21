@@ -100,7 +100,7 @@ function initialiseIntersectionObserver(){
                 let elementCover = entries[i].target.querySelector(".about__box__cover")
                 setTimeout(() => {
                     elementCover.style.opacity = 0;
-                    elementCover.style.zIndex = -1;
+                    // elementCover.style.zIndex = -1;
                     entries[i].target.classList.add('animate');
 
                 }, 1000);
@@ -109,7 +109,7 @@ function initialiseIntersectionObserver(){
                 }, 3900);
             }
         }
-    }, {threshold:1.0});
+    }, {threshold:0.8});
     
     for(let i = 0; i < aboutBoxAll.length; i++)
     {
@@ -234,7 +234,6 @@ function switchViews(sectionName){
         const aboutBoxAll = document.querySelectorAll(".about__box");
         const aboutBoxCoverAll = document.querySelectorAll(".about__box__cover");
 
-        initialiseIntersectionObserver();
         if(aboutOpacity == 1)
         {
             aboutBoxAll.forEach((aboutBox) =>{
@@ -244,16 +243,18 @@ function switchViews(sectionName){
             });
             aboutBoxCoverAll.forEach((aboutBoxCover) =>{
                 aboutBoxCover.style.opacity = 1;
-                aboutBoxCover.style.zIndex = 1;
+                // aboutBoxCover.style.zIndex = 1;
             })
             console.log("over here!!!");
             aboutSection.style.opacity = 0;
             aboutSection.style.zIndex = -1;
+
         } else if(aboutOpacity == 0)
         {
             console.log("changing opacity");
             aboutSection.style.opacity = 1;
             aboutSection.style.zIndex = 1;
+            initialiseIntersectionObserver();
         }
 
         if(aboutwo == 1)

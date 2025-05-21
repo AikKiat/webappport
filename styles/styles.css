@@ -218,7 +218,7 @@
     position:absolute;
     height: 80%;
     width: fit-content;
-    background: #131313;
+    background: inherit;
     border: 0.3rem dashed #131313;
     display: flex;
     flex-direction: row;
@@ -276,7 +276,7 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
 #content #profile{
     height: 20rem;
     width: 15rem;
-    background:#131313;
+    background:transparent;
 }
 
 
@@ -301,10 +301,11 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     width: 100%;
     height: fit-content;
     background: #131313;
-    border:0.3rem solid #131313;
+    border:0.5rem solid #131313;
     flex: 1;
     opacity: 0;
     animation-play-state: paused;
+    transition: all 1s ease;
 }
 
 #profile_container{
@@ -314,7 +315,7 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     border: 10px solid #009cff;
 }
 
-.about__box span{
+.about__box .about__box__cover{
     position: relative;
     background:#131313;
     width: 100%;
@@ -336,10 +337,40 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     padding: 0.5rem;
     transform: translateX(-0.5rem) translateY(-0.5rem);
     background: conic-gradient(#00eeff, transparent var(--gradient-angle));
-    filter: blur(0.1rem);
+    filter: blur(0.3rem);
 
 
-    animation: aboutBoxBorderTrace 0.8s ease-in-out infinite;
+    animation: aboutBoxBorderTrace 1.5s ease-in-out infinite;
+}
+
+.about__box p{
+    font-size: 2.0rem;
+    color: #d6f7a3;
+    padding: 0.5rem;
+    text-shadow: 
+    0 0 0.5rem #faffb0,
+    0 0 0.5rem #10e8c4; /*offset x, offsety, blur radius, colour */
+}
+
+#Ending .about__box p{
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow:
+    0 0 0.3rem #faffb0,
+    0 0 0.5rem #10e8c4; /*offset x, offsety, blur radius, colour */
+}
+
+.about__box .leadership__role{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.about__box li{
+    padding: 0.5rem;
+    text-shadow: 
+    0 0 0.8rem #fff,
+    0 0 0.5rem #10c0e8; /*offset x, offsety, blur radius, colour */
+
 }
 
 @property --gradient-angle{
