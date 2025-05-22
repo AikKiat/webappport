@@ -143,8 +143,9 @@
     background:#10c0e8;
 }
 
-.skills__section .back__button{
-    position: relative;
+.skills__section #top__content .back__button{
+    position:absolute;
+    right: 0%;
     width: 4rem;
     height: 4rem;
     background:#10c0e8;
@@ -620,106 +621,46 @@ html, body {
     background: transparent;
     border: 0.2rem dashed #131313;
     display: flex;
+    flex-direction: column;
     padding: 0;
+    overflow-y: auto;
+    align-items: center;
 
     box-shadow: 0 0 0.9rem 0.2rem #009cff, inset 0 0 0.9rem 0.2rem #009cff;
 }
 
-
-.my__skills h1{
-    font-size: 2rem;
-    text-decoration: underline;
-    padding: 1rem;
-}
-.my__skills{
+.skills__section #top__content{
     width: 100%;
     height: fit-content;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
-}
-
-.my__skills div{
-    height: fit-content;
-    display: flex;
-}
-.my__skills .skill__icons{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+}
+
+#top__content h1{
+    font-size: 2rem;
+    color: #fff;
+    width: 80%;
+    height: fit-content;
+    text-wrap-mode: wrap;
 }
 
 .icon{
-    width: 11%;
-    height: 11%;
-    padding: 0.5rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 1.2rem;
+    margin: 0.3rem;
 }
 
-.my__skills .languages{
-    margin-top: 1rem;
-    width: 50%;
+#SpringBoot{
+    width: 10rem;
 }
 
-.languages .icon{
-    transform: scale(2.0);
-    margin-left: 2rem;
-}
-
-.languages #css{
-    transform: scale(2.5);
-    margin-left: 1.0rem;
-}
-
-.languages #python{
-    margin-left: 0rem;
-}
-
-
-.my__skills .frameworks__env{
-    top: 35%;
+.my__skills__grid{
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-}
-
-.frameworks__env .icon{
-    width: 8%;
-    height: 8%;
-}
-
-.my__skills .libraries{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 62%;
-    left: 50%;
-}
-
-.libraries .icon{
-    width: 15%;
-    height: 15%;
-}
-
-.libraries #pd{
-    transform: scale(1.5);
-    margin-left: 1rem;
-    margin-right: 0;
-}
-
-.my__skills .art{
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.art .icon{
-    transform: scale(1.0);
-    margin-right: 1rem;
-}
-
-.art #ue5{
-    transform: scale(1.2);
+    top: 10%;
+    left: 0;
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
 }
