@@ -159,6 +159,27 @@
                     <div class="projects__section__border">
                     </div>
                     <section class="projects__container">
+                    <div class="projects__popupWindow">
+                        <div class="project__information">
+                            <iframe id="project__information__video" src="#" frameborder="0" allowfullscreen ng-show="showvideo"></iframe>
+                            <h1>Information</h1>
+                        </div>
+                        <p class="information__body"></p>
+                        <div class="buttons">
+                            <button class="back__button" onclick="summonPopup('exit')">
+                            <div class="cross">
+                                <span id="cross__1"></span>
+                                <span id="cross__2"></span>
+                            </div>
+                            <div class="back__button__border"></div>
+                            </button>
+
+                            <a class="holder">
+                                <button class= "project__github"></button>
+                                <span>Github Link</span>
+                            </a>
+                        </div>
+                    </div>
                     <div id="title__and__button">
                         <h1>Key Projects</h1>
                         <button class="back__button" onclick="toggle('projects')">
@@ -183,9 +204,7 @@
                                         app for people in their 50s - 60s and caregivers of the elderly. Realtime food nutrient and 
                                         medicinal package details analysis using Computer Vision, AI chatbot, live medical centre finder. PostgresSQL for user Data, hosted in AWS.</p>
                                 </div>
-                                <a href="https://github.com/ItsMeOX/SmartHealth">
-                                    <button class="card__button">Learn More</button>
-                                </a>
+                                    <button class="card__button" onclick="summonPopup('smartHealth')">Learn More</button>
                                 <div class="project__card__border"></div>
                             </div>
                             
@@ -202,9 +221,9 @@
                                     <p>Life-sized Virtual Fish simulations using Computer Vision, Mediapipe Motion Gesture detection library, 
                                         transferring results to control graphics simulation inside 3D Blender Environment.</p>
                                 </div>
-                                <a href="https://github.com/AikKiat/Pools-of-Possibilities-FIsh-Flock-Simulation-and-Motion-Gesture-Detection-in-Blender">
-                                    <button class="card__button">Learn More</button>
-                                </a>
+                                
+                                    <button class="card__button" onclick="summonPopup('popKids')">Learn More</button>
+                          
                                 <div class="project__card__border"></div>
                             </div>
                         </div>
@@ -221,9 +240,9 @@
                                         Inspiration: applying Computer Vision for meaningful, helpful and practical uses.</p>
                                     
                                 </div>
-                                <a href="https://github.com/AikKiat/ObjectDetect-Test">
-                                    <button class="card__button">Learn More</button>
-                                </a>
+                               
+                                    <button class="card__button" onclick="summonPopup('fred')">Learn More</button>
+                            
                                 <div class="project__card__border"></div>
                             </div>
                         </div>
@@ -240,9 +259,8 @@
                                         Focused on creating sound effects, figure and blood spatter animations, kill streak system. </p>
                                     
                                 </div>
-                                <a href="https://github.com/AikKiat/The-Mathematician-s-Massacre">
-                                    <button class="card__button">Learn More</button>
-                                </a>
+                                
+                                    <button class="card__button" onclick="summonPopup('mathMassacre')">Learn More</button>
                                 <div class="project__card__border"></div>
                             </div>
                         </div>
@@ -258,9 +276,8 @@
                                     <p>REBEL model for News Article text relations extraction, adopting a Transformer-based architecture 
                                         instead of Classification-based pipelines. Visualized using Pyvis. </p>
                                 </div>
-                                <a href="https://github.com/AikKiat/News-Article-Detective-NLP-Texts-Relations-Project-">
-                                    <button class="card__button">Learn More</button>
-                                </a>
+                                
+                                    <button class="card__button" onclick="summonPopup('nlpNews')">Learn More</button>
                                 <div class="project__card__border"></div>
                             </div>
                         </div>
@@ -277,9 +294,7 @@
                                         an existing model. Used OpenCV for image analysis and Tensorflow,
                                          we passed the results to a physical Arduino board. </p>
                                 </div>
-                                <a href="https://github.com/AikKiat/-WTH2024-GreenLoop-Smart-Recyclables-Sorting">
-                                    <button class="card__button">Learn More</button>
-                                </a>
+                                    <button class="card__button" onclick="summonPopup('greenLoop')">Learn More</button>
                                 <div class="project__card__border"></div>
                             </div>
                         </div>

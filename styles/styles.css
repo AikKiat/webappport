@@ -305,6 +305,7 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     border:0.5rem solid #131313;
     flex: 1;
     opacity: 0;
+    inset: 1px;
     animation-play-state: paused;
     transition: all 1s ease;
 }
@@ -324,6 +325,7 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     position: absolute;
     top: 0%;
     left: 0%;
+    inset: 1px;
     opacity: 1;
 }
 
@@ -335,13 +337,11 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Ch
     left: 0%;
     width: 100%;
     height: 100%;
-    padding: 0.5rem;
     transform: translateX(-0.5rem) translateY(-0.5rem);
-    background: conic-gradient(#00eeff, transparent var(--gradient-angle));
-    filter: blur(0.3rem);
+    background:repeating-conic-gradient(from var(--gradient-angle), #00eaff 0%, #00eaff 10%, transparent 10%, transparent 50%);
 
 
-    animation: aboutBoxBorderTrace 1.5s ease-in-out infinite;
+    animation: aboutBoxBorderTrace 2s linear infinite;
 }
 
 .about__box p{

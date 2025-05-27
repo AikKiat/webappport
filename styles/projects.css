@@ -7,6 +7,178 @@
 } */
 
 
+
+.projects__popupWindow{
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 100%;
+    background:transparent;
+    animation: glitchWindow 0.1s linear forwards;
+    box-shadow: 0 0 0.9rem 0.2rem #00eaff, inset 0 0 0.9rem 0.2rem #009cff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    
+}
+
+.projects__popupWindow::before{
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background:#00000027;
+    opacity: 1.0;
+    content: "";
+    backdrop-filter: blur(5px);
+
+}
+
+@keyframes glitchWindow{
+    50%{
+        transform: skew(180deg);
+    }
+}
+
+.project__information{
+    font-size: 1.5rem;
+    color: #fdf990;
+    padding: 0.5rem;
+}
+
+.project__information h1{
+    position: relative;
+    left: 0%;
+    text-align: center;
+}
+
+.information__body{
+    width: 80%;
+    height: 50%;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 0.5rem;
+    overflow-y:scroll;
+}
+
+#project__information__video{
+    z-index: 1;
+    opacity: 1;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height:20rem;
+    width:30rem;
+}
+
+#project__information__image{
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    background:transparent;
+    top: 0%;
+    left: -12%;
+    height:20rem;
+    width:30rem;
+}
+
+.buttons{
+    position: relative;
+    top: 0%;
+    right: 0%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 4rem;
+    width: 10rem;
+    padding: 0.5rem;
+    gap: 1.0rem;
+
+}
+
+.buttons .back__button{
+    margin: 0rem;
+    position: relative;
+    background: #fdf990;
+}
+
+.project__github{
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    background:#292929;
+}
+
+@property --angle{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.project__github::before{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background:repeating-conic-gradient(from var(--angle), #00eaff 0%, #00eaff 10%, transparent 10%, transparent 50%);
+    animation: rotate 5s linear infinite;
+}
+
+.project__github::after{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    inset: 2px;
+    content: "";
+    color: #fff;
+    text-align: center;
+    border:20px solid #131313;
+    background: #131313;
+}
+
+.holder{
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+}
+
+.holder span{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    top: 25%;
+    left: 15%;
+    color: #fff;
+    margin-right: 4rem;
+}
+
+@keyframes rotate{
+    0%{
+        --angle: 0deg
+    }
+    100%{
+        --angle: 360deg
+    }
+}
+
+
+
+
+
+
+
+
+
+
 .card {
     width: 25rem;
     height: 30rem;
