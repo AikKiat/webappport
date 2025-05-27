@@ -315,7 +315,8 @@ smartHealth_text = `Android App created as Part of 50.001 Informations Systems a
 Created using Java in Android Studio, and used Java Spring as the backend framework. 
 User data stored in a PostGreSQL database, hosted on AWS.\n 
 REST APIs for standardised clear communication standard between the client and backend, 
-and RESTful APIs include Google Places, Routes API, Open AI GPT4.0 Api.`
+and RESTful APIs include Google Places, Routes API, Open AI GPT4.0 Api. We also hosted this backend on a free server space platform called Render, 
+allowing the backend service of our app to be running 24/7. A step towards increased efficacy in deployment, and allowing our backend service to scale to larger platforms in the future. `
 
 
 popKids_text = `A virtual life-size simulation of fishes that morph and swirl according to users' hand gestures.
@@ -323,24 +324,25 @@ Used OpenCV and Mediapipe for motion gesture detection, captured through an XBOX
 Spearheaded parsing of the AI prediction data as results to drive the fish particle elements in the simulation, and also set up the scene in Blender 3D to host this simulation, using the built-in Blender Python Library.`
 
 
-nlpNews_Text =`My own personal project on exploring the applications of NLP, namely on finding the relations between news articles. I used the Babelscape's REBEL Model, which uses a Transformer-based approach to extract 
-key text information from a given corpus, in the form of Triplets. This is at odds with conventional Classification Pipelines 
-which are two step in nature, firstly requiring a transformer to find all possible combinations of keywords, and then parsing the results to a trained classifier to determine the relations. Read more on my github repo!`
+nlpNews_Text =`My own personal project on exploring the applications of NLP, namely on finding the relations between news articles. I used Babelscape's REBEL Model, which uses a Transformer-based approach to extract 
+key text information from a given corpus in the form of triplets. This is at odds with conventional Classification Pipelines 
+which are multi-step in nature, from pre-processing to Feature Extraction, and encoding said features to be parsed into a Classification model for training and evaluation. Read more on my github repo!`
 
 
-mathMassacre_text=`Simple and fun game created during our first term at SUTD, using Python Standard Libraries and Tkinter. Project done as part of our Computational Thinking for Design course, as an introduction to simple programming.`
+mathMassacre_text=`Simple and fun game created during our first term at SUTD, using Python Standard Libraries and Tkinter. Project done as part of our Computational Thinking for Design course, an introduction to simple programming in Python.`
 
 
-fred_text=`My personal project for exploring how Real-time object detection can be implemented as a handheld feature, and thus I devled into Flutter App development as well. Used the TensorflowLite plugin as well as OpenCV for object detection. More info about it on my github repo.`
+fred_text=`My personal project for exploring how Real-time Object Detection can be implemented as a handheld feature, and thus I devled into Flutter App development as well. Used the TensorflowLite plugin as well as OpenCV for object detection. More info about it on my github repo.`
 
 
 greenLoop_text=`Team Project as part of SUTD's annual What-The-Hack(WTH) competition featuring sponsors such as DBS, HTX, Govtech and IMDA. As a team, we built a system that could sort recyclables automatically via OpenCV for Computer Vision, 
-and detecting the type of recyclable using an existing model. The prediction results were then passed over to an onboard ESP32 via Serial Comm, to drive the hardware components.`
+detecting the type of recyclable using an existing model. The prediction results were then passed over to an onboard ESP32 via Serial Communication at a synchronized Baud Rate on both the local machine and the ESP32. By collecting the data, conditionals could thus be coded 
+into the ESP32 to drive the hardware components in different ways to sort the different types of recyclables.`
 
 
 videoLinks = {"smartHealth":"https://www.youtube.com/embed/EaPBjWaO0MM?si=8EUNXFvua8doaU5p", "popKids":"https://www.youtube.com/embed/JwkDctVayhs?si=-H7w17iXeZvOiQ4x", 
     "fred": "https://www.youtube.com/embed/oVhxidlmAhY?si=fD7OIAYSqiQlSckN", "mathMassacre":"https://www.youtube.com/embed/adQkJX5DadU?si=-48adIf1l1DBiVgI",
-    "nlpNews": "https://www.youtube.com/embed/5yQdkhj2GSM?si=E2srlXCG-6ffiaan", "greenLoop":"images/project_images/hacking2.jpg"}
+    "nlpNews": "https://www.youtube.com/embed/5yQdkhj2GSM?si=E2srlXCG-6ffiaan", "greenLoop":"images/project_images/hacking2.jpg", "placeholder":"#"}
 
 gitHubLinks = {"smartHealth":"https://github.com/ItsMeOX/SmartHealth", "popKids":"https://github.com/AikKiat/Pools-of-Possibilities-FIsh-Flock-Simulation-and-Motion-Gesture-Detection-in-Blender", 
     "fred": "https://github.com/AikKiat/ObjectDetect-Test", "mathMassacre":"https://github.com/AikKiat/The-Mathematician-s-Massacre",
@@ -378,6 +380,7 @@ function summonPopup(selector){
     )
 
     if (selector == 'exit'){
+        videoSource.setAttribute('src', videoLinks['placeholder']);
         setTimeout(() => {
             videoSource.style.zIndex = 1;
             videoSource.style.opacity = 1;
@@ -437,5 +440,4 @@ function summonPopup(selector){
         holder.href= gitHubLinks['greenLoop'];
         console.log("hacakthon");
     }
-
 }

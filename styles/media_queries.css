@@ -283,11 +283,6 @@
         grid-template-columns:repeat(2,1fr);
     }
 
-    #SpringBoot{
-        width: 6rem;
-        height: 4rem;
-    }
-
     .Connect{
         right: 0%;
     }
@@ -361,10 +356,6 @@
         grid-template-columns:repeat(3,1fr);
     }
 
-    #SpringBoot{
-        width: 6rem;
-        height: 4rem;
-    }
 
     .card{
         left: 3%;
@@ -429,11 +420,6 @@
         top: 15%;
         left: 10%;
         grid-template-columns:repeat(3,1fr);
-    }
-
-    #SpringBoot{
-        width: 6rem;
-        height: 4rem;
     }
 
     .card{
@@ -640,11 +626,6 @@
 }
 
 @media all and (min-width:456px) and (max-width: 768px){
-
-    #SpringBoot{
-        width: 6rem;
-        height: 4rem;
-    }
     
     .card__wrap{
         display: flex;
@@ -690,10 +671,6 @@
         grid-template-columns:repeat(3,1fr);
     }
 
-    #SpringBoot{
-        width: 6rem;
-        height: 4rem;
-    }
     
     .card__wrap{
         display: flex;

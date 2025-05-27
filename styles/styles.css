@@ -618,11 +618,12 @@ html, body {
     left: 20%;
     height: 60%;
     width: 60%;
-    background: transparent;
+    background: #f0fffed6;
     border: 0.2rem dashed #131313;
     display: flex;
     flex-direction: column;
     padding: 0;
+    opacity: 0.3;
     overflow-y: auto;
     align-items: center;
 
@@ -638,7 +639,7 @@ html, body {
 
 #top__content h1{
     font-size: 2rem;
-    color: #fff;
+    color:#131313;
     width: 80%;
     height: fit-content;
     text-wrap-mode: wrap;
@@ -651,10 +652,11 @@ html, body {
     margin: 0.3rem;
 }
 
-#SpringBoot{
-    width: 10rem;
-}
 
+
+#posgressql{
+    width: 5rem;
+}
 .my__skills__grid{
     position: absolute;
     top: 10%;
