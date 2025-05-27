@@ -276,8 +276,13 @@ function switchViews(sectionName){
     else if(sectionName == "projects"){
         const projectSection = document.querySelector(".projects__section");
         const opacity = window.getComputedStyle(projectSection).opacity;
+        let videoSource = document.getElementById("project__information__video");
+        let popUpWindow = document.querySelector(".projects__popupWindow");
         if(opacity == 1)
         {
+            popUpWindow.style.opacity = 0;
+            popUpWindow.style.zIndex = -1;
+            videoSource.setAttribute('src', videoLinks['placeholder']);
             projectSection.style.opacity = 0;
             projectSection.style.zIndex = -1;
         } else if(opacity == 0)
