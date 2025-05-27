@@ -340,7 +340,7 @@ detecting the type of recyclable using an existing model. The prediction results
 into the ESP32 to drive the hardware components in different ways to sort the different types of recyclables.`
 
 
-videoLinks = {"smartHealth":"https://www.youtube.com/embed/EaPBjWaO0MM?si=8EUNXFvua8doaU5p", "popKids":"https://www.youtube.com/embed/JwkDctVayhs?si=-H7w17iXeZvOiQ4x", 
+videoLinks = {"smartHealth":"https://www.youtube.com/embed/EaPBjWaO0MM?si=8EUNXFvua8doaU5p", "popKids":"https://www.youtube.com/embed/BSN1rSyl0B4?si=RyzNlVKUtPLwYHLW" , 
     "fred": "https://www.youtube.com/embed/oVhxidlmAhY?si=fD7OIAYSqiQlSckN", "mathMassacre":"https://www.youtube.com/embed/adQkJX5DadU?si=-48adIf1l1DBiVgI",
     "nlpNews": "https://www.youtube.com/embed/5yQdkhj2GSM?si=E2srlXCG-6ffiaan", "greenLoop":"images/project_images/hacking2.jpg", "placeholder":"#"}
 
