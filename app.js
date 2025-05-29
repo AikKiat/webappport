@@ -101,16 +101,16 @@ function initialiseIntersectionObserver(){
         for(let i = 0; i < entries.length; i++)
         {
             if(entries[i].isIntersecting){
-                let elementCover = entries[i].target.querySelector(".about__box__cover");
                 observer.unobserve(entries[i].target);
+                let elementCover = entries[i].target.querySelector(".about__box__cover");
                 entries[i].target.style.opacity=1;
                 setTimeout(() => {
                     elementCover.style.opacity = 0;
                     entries[i].target.classList.add('animate');
+                    elementCover.style.zIndex = -1;
 
                 }, 1000);
                 setTimeout(() => {
-                    elementCover.style.zIndex = -1;
                     entries[i].target.style.animationPlayState = "paused";
                 }, 3900);
             }
@@ -249,7 +249,7 @@ function switchViews(sectionName){
             });
             aboutBoxCoverAll.forEach((aboutBoxCover) =>{
                 aboutBoxCover.style.opacity = 1;
-                // aboutBoxCover.style.zIndex = 1;
+                aboutBoxCover.style.zIndex = '';
             })
             console.log("over here!!!");
             aboutSection.style.opacity = 0;
