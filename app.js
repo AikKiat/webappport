@@ -101,16 +101,16 @@ function initialiseIntersectionObserver(){
         for(let i = 0; i < entries.length; i++)
         {
             if(entries[i].isIntersecting){
-                observer.unobserve(entries[i].target)
+                let elementCover = entries[i].target.querySelector(".about__box__cover");
+                observer.unobserve(entries[i].target);
                 entries[i].target.style.opacity=1;
-                let elementCover = entries[i].target.querySelector(".about__box__cover")
                 setTimeout(() => {
                     elementCover.style.opacity = 0;
-                    // elementCover.style.zIndex = -1;
                     entries[i].target.classList.add('animate');
 
                 }, 1000);
                 setTimeout(() => {
+                    elementCover.style.zIndex = -1;
                     entries[i].target.style.animationPlayState = "paused";
                 }, 3900);
             }
