@@ -115,7 +115,7 @@ function initialiseIntersectionObserver(){
                 }, 3900);
             }
         }
-    }, {threshold:0.8});
+    }, {threshold:0.6});
     
     for(let i = 0; i < aboutBoxAll.length; i++)
     {
@@ -310,7 +310,7 @@ function switchViews(sectionName){
 
 function downloadResume(){
    // const downloadButton = document.querySelector(".resume");
-    const fileLink = "https://drive.google.com/file/d/1eoFZH2_LDuVrmVGw4mqAE2y6sHGUSbY0/view?usp=drive_link";
+    const fileLink = "https://drive.google.com/file/d/1Ewjh3BPmbUB8GFlyOUNbW4dY8sN5Rqvx/view?usp=drive_link";
     location.href = fileLink;
 }
 
