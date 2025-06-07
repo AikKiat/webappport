@@ -1,6 +1,12 @@
 //prevent screen rotation(this is a fully portrait vieweing webapp -> for mobile views)
-document.documentElement.requestFullscreen().then(
-    ()=>screen.orientation.lock("portrait"));
+
+document.addEventListener('DOMContentLoaded', lockScreen())
+function lockScreen(){
+    screen.orientation.lock("portrait-primary").then(()=>{
+        console.log("locked");
+    });
+}
+
 
 
 
