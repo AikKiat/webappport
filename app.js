@@ -1,3 +1,8 @@
+//prevent screen rotation(this is a fully portrait vieweing webapp -> for mobile views)
+document.documentElement.requestFullscreen().then(
+    ()=>screen.orientation.lock("portrait"));
+
+
 
 function createHeroDescriptions(autotypeTextUl,dynamicTexts){
     for (i = 0; i < dynamicTexts.length; i++)
