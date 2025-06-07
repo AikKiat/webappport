@@ -134,7 +134,7 @@ function initialiseIntersectionObserver(){
                 }, 3900);
             }
         }
-    }, {threshold:0.6});
+    }, {threshold:0.45});
     
     for(let i = 0; i < aboutBoxAll.length; i++)
     {
