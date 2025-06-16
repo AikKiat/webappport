@@ -16,6 +16,10 @@ function lockOrientation() {
 }
 
 
+//A global counter to keep track of how many times the back arrow has been pressed
+var numPressed = 0;
+
+
 
 
 function createHeroDescriptions(autotypeTextUl,dynamicTexts){
@@ -164,11 +168,16 @@ function start(){
 
     navigationButtons.forEach(element => {
         element.style.opacity = 1;
-        element.style.zIndex = 1;
+        element.style.zIndex = 2;
     });
 }
 
 function toggle(sectionName){
+
+    numPressed += 1;
+    if (numPressed >= 2){
+        spawnContactMeButton();
+    }
 
     //get button
     const back__buttons = document.querySelectorAll(".back__button");
@@ -246,7 +255,7 @@ function switchViews(sectionName){
     } else if(searchOpacity == 0)
     {
         searchSection.style.opacity = 1;
-        searchSection.style.zIndex = 1;
+        searchSection.style.zIndex = 2;
     }
 
     //show sections based off sectionName
@@ -464,4 +473,92 @@ function summonPopup(selector){
         holder.href= gitHubLinks['greenLoop'];
         console.log("hacakthon");
     }
+}
+
+
+
+//Set up the contact me button and all of the code
+
+function showContactWindow(){
+    deSpawnContactMeButton();
+    //get all DOM elements
+    let contactWindow = document.querySelector(".contact__window");
+    let progressBar = document.getElementById("progress__bar");
+    let contactScrollEffect = document.querySelector(".contact__paper__scroll__effect");
+    let contactWindowCloseButton = document.querySelector(".close__button");
+    let contactWindowForm = document.querySelector(".contact__form");
+
+    let searchSection = document.querySelector(".search__section");
+    searchSection.style.zIndex = 0;
+
+    //onclick, set the progress bar to run first. After it is completed,
+    //pause the animation and set the scroll effect.
+    //then, render the rest of the items.
+
+    console.log("opening");
+
+    contactWindow.style.zIndex = 2;
+    contactWindow.style.top = '20%';
+
+    progressBar.style.opacity = 1;
+    progressBar.classList.add("animate__progress__bar");
+    progressBar.style.animationPlayState = "running";
+
+    setTimeout(() => {
+        contactScrollEffect.style.opacity =1;
+        
+        contactScrollEffect.classList.add("animate__scroll__effect");
+    }, 700);
+
+    setTimeout(() => {
+        contactWindowCloseButton.style.opacity = 1;
+        contactWindowForm.style.opacity = 1;
+    }, 1000);
+}
+
+function closeContactWindow(){
+    spawnContactMeButton();
+    let contactWindow = document.querySelector(".contact__window");
+    let progressBar = document.getElementById("progress__bar");
+    let contactScrollEffect = document.querySelector(".contact__paper__scroll__effect");
+    
+    contactWindow.classList.add("animate__contact__window");
+    setTimeout(() => {
+        progressBar.style.opacity = 0;
+        contactScrollEffect.style.opacity = 0;
+        contactWindow.style.zIndex = -1;
+        contactWindow.classList.remove("animate__contact__window");
+    }, 100);
+
+    contactScrollEffect.classList.remove("animate__scroll__effect");
+    progressBar.classList.remove("animate__progress__bar");
+}
+
+function spawnContactMeButton(){
+    let contactMeButton = document.querySelector(".contact__me__button");
+    let flash = document.querySelector(".flash")
+
+    flash.style.opacity = 1;
+    flash.classList.add("animate__flash");
+    contactMeButton.style.opacity = 1;
+    contactMeButton.style.zIndex = 1;
+    flash.animationPlayState = "running";
+    setTimeout(() => {
+        flash.classList.remove("animate__flash");
+    }, 300);
+}
+
+function deSpawnContactMeButton(){
+    let contactMeButton = document.querySelector(".contact__me__button");
+    let flash = document.querySelector(".flash")
+    
+    contactMeButton.style.opacity = 0;
+    contactMeButton.style.zIndex = -1;
+    flash.style.opacity =1;
+    flash.classList.add("animate__flash");
+    setTimeout(() => {
+        flash.style.opacity = 0;
+        flash.classList.remove("animate__flash");
+    }, 300);
+
 }

@@ -31,6 +31,31 @@
                     <img src="images/icons/JavaScript-logo.png" class="js" id="icon">
                 </div>
                 <section class="hero" id="home">
+                    <div class="contact__me__button__holder">
+                        <button class="contact__me__button" onclick="showContactWindow()">!</button>
+                        <span class="flash"></span>
+                    </div>
+                    <div class="contact__window">
+                        <span id="progress__bar"></span>
+                        <div class="contact__paper__scroll__effect">
+                            <div class="contact__container">
+                                <button class="close__button" onclick="closeContactWindow()">
+                                    <span id="cross1"></span>
+                                    <span id="cross2"></span>
+                                </button>
+                                <form action="https://api.web3forms.com/submit" method="post" class="contact__form">
+
+                                    <input type="hidden" name="access_key" value="ceafe000-bdc1-4032-8444-c4ee05df79b7">
+
+                                    <h2>Like What You're Seeing? Get in Touch!</h2>
+                                    <input class="contact__inputs" id="name__box" type="text", name="name", placeholder="Your Name" required/>
+                                    <input class="contact__inputs" id="email__box" type="text", name="email", placeholder="Your Email" required/>
+                                    <textarea class="contact__inputs" id="message__box" name="message" placeholder="Your Message"></textarea>
+                                    <button class="message__submit__button" onclick="closeContactWindow()">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <div class="background"></div>
                     <div class="hero__container">
                         <h1 class="hero__heading">Greetings</h1>
