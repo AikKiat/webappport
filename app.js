@@ -498,7 +498,7 @@ function showContactWindow(){
     console.log("opening");
 
     contactWindow.style.zIndex = 2;
-    contactWindow.style.top = '20%';
+    // contactWindow.style.top = '20%';
 
     progressBar.style.opacity = 1;
     progressBar.classList.add("animate__progress__bar");
@@ -508,12 +508,12 @@ function showContactWindow(){
         contactScrollEffect.style.opacity =1;
         
         contactScrollEffect.classList.add("animate__scroll__effect");
-    }, 700);
+    }, 2500);
 
     setTimeout(() => {
         contactWindowCloseButton.style.opacity = 1;
         contactWindowForm.style.opacity = 1;
-    }, 1000);
+    }, 3400);
 }
 
 function closeContactWindow(){
@@ -545,7 +545,7 @@ function spawnContactMeButton(){
     flash.animationPlayState = "running";
     setTimeout(() => {
         flash.classList.remove("animate__flash");
-    }, 300);
+    }, 200);
 }
 
 function deSpawnContactMeButton(){
@@ -556,9 +556,9 @@ function deSpawnContactMeButton(){
     contactMeButton.style.zIndex = -1;
     flash.style.opacity =1;
     flash.classList.add("animate__flash");
-    setTimeout(() => {
-        flash.style.opacity = 0;
+    flash.style.animationPlayState = "running";
+    setTimeout(() => {;
         flash.classList.remove("animate__flash");
-    }, 300);
+    }, 200);
 
 }

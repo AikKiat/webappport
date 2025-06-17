@@ -31,28 +31,32 @@
                     <img src="images/icons/JavaScript-logo.png" class="js" id="icon">
                 </div>
                 <section class="hero" id="home">
-                    <div class="contact__me__button__holder">
-                        <button class="contact__me__button" onclick="showContactWindow()">!</button>
-                        <span class="flash"></span>
-                    </div>
-                    <div class="contact__window">
-                        <span id="progress__bar"></span>
-                        <div class="contact__paper__scroll__effect">
-                            <div class="contact__container">
-                                <button class="close__button" onclick="closeContactWindow()">
-                                    <span id="cross1"></span>
-                                    <span id="cross2"></span>
-                                </button>
-                                <form action="https://api.web3forms.com/submit" method="post" class="contact__form">
+                    <div class="contact__me__section">
+                        <div class="contact__me__button__holder">
+                            <button class="contact__me__button" onclick="showContactWindow()">
+                                <img id="mail__icon" src="images/icons/mail.png">
+                            </button>
+                            <span class="flash"></span>
+                        </div>
+                        <div class="contact__window">
+                            <span id="progress__bar"></span>
+                            <div class="contact__paper__scroll__effect">
+                                <div class="contact__container">
+                                    <button class="close__button" onclick="closeContactWindow()">
+                                        <span id="cross1"></span>
+                                        <span id="cross2"></span>
+                                    </button>
+                                    <form action="https://api.web3forms.com/submit" method="post" class="contact__form">
 
-                                    <input type="hidden" name="access_key" value="ceafe000-bdc1-4032-8444-c4ee05df79b7">
+                                        <input type="hidden" name="access_key" value="ceafe000-bdc1-4032-8444-c4ee05df79b7">
 
-                                    <h2>Like What You're Seeing? Get in Touch!</h2>
-                                    <input class="contact__inputs" id="name__box" type="text", name="name", placeholder="Your Name" required/>
-                                    <input class="contact__inputs" id="email__box" type="text", name="email", placeholder="Your Email" required/>
-                                    <textarea class="contact__inputs" id="message__box" name="message" placeholder="Your Message"></textarea>
-                                    <button class="message__submit__button" onclick="closeContactWindow()">Submit</button>
-                                </form>
+                                        <h2>Like What You're Seeing? Get in Touch!</h2>
+                                        <input class="contact__inputs" id="name__box" type="text", name="name", placeholder="Your Name" required/>
+                                        <input class="contact__inputs" id="email__box" type="text", name="email", placeholder="Your Email" required/>
+                                        <textarea class="contact__inputs" id="message__box" name="message" placeholder="Your Message"></textarea>
+                                        <button class="message__submit__button" onclick="closeContactWindow()">Submit</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -329,24 +333,81 @@
                         </button>
                     </div>
                     <div class="my__skills__grid">
-                        <img src="images/icons/python.png" id="python" class="icon">
-                        <img src="images/icons/java.png" id="java" class="icon">
-                        <img src="images/icons/html5.png" id="html5" class="icon">
-                        <img src="images/icons/css.png" id="css" class="icon">
-                        <img src="images/icons/JavaScript-logo.png" id="js" class="icon">
-                        <img src="images/icons/nodejs.png" id="nodejs" class="icon">
-                        <img src="images/icons/react.png" id="react" class="icon">
-                        <img src="images/icons/androidstudio.png" id="androidstudio" class="icon">
-                        <img src="images/icons/flutter.png" id="flutter" class="icon">
-                        <img src="images/icons/figma.png" id="figma" class="icon">
-                        <img src="images/icons/SpringBoot.png" id="SpringBoot" class="icon">
-                        <img src="images/icons/restapi.png" id="restapi" class="icon">
-                        <img src="images/icons/mongodb.png" id="mongodb" class="icon">
-                        <img src="images/icons/posgressql.png" id="posgressql" class="icon">
-                        <img src="images/icons/mysql.png" id="mysql" class="icon">
-                        <img src="images/icons/blender.png" id="blender" class="icon">
-                        <img src="images/icons/ue5.png" id="ue5" class="icon">
-                        <img src="images/icons/zbrush.jpg" id="zbrush", class="icon">
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">Python</div>
+                            <img src="images/icons/python.png" id="python" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">Java</div>
+                            <img src="images/icons/java.png" id="java" class="icon">
+                        </div>
+                        
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">Html5</div>
+                            <img src="images/icons/html5.png" id="html5" class="icon">
+                        </div>
+
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">CSS</div>
+                            <img src="images/icons/css.png" id="css" class="icon">
+                        </div>
+                       
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">Javascript</div>
+                            <img src="images/icons/JavaScript-logo.png" id="js" class="icon">
+                        </div>   
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">NodeJS</div>
+                            <img src="images/icons/nodejs.png" id="nodejs" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">React</div>
+                            <img src="images/icons/react.png" id="react" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip" id="android__studio__tooltip">Android Studio</div>
+                            <img src="images/icons/androidstudio.png" id="androidstudio" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">Flutter</div>
+                            <img src="images/icons/flutter.png" id="flutter" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">Figma</div>
+                            <img src="images/icons/figma.png" id="figma" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">JavaSpring</div>
+                            <img src="images/icons/SpringBoot.png" id="SpringBoot" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip" id="REST__API__tooltip">RESTful APIs</div>
+                            <img src="images/icons/restapi.png" id="restapi" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">MongoDB</div>
+                            <img src="images/icons/mongodb.png" id="mongodb" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">PostgresSQL</div>
+                            <img src="images/icons/posgressql.png" id="posgressql" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">MySQL</div>
+                            <img src="images/icons/mysql.png" id="mysql" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">Blender3D</div>
+                            <img src="images/icons/blender.png" id="blender" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">UE5</div>
+                            <img src="images/icons/ue5.png" id="ue5" class="icon">
+                        </div>
+                        <div class="icon__holder">
+                            <div class="skill__tooltip">Zbrush</div>
+                            <img src="images/icons/zbrush.jpg" id="zbrush", class="icon">
+                        </div>
                     </div>
                 </section>
 

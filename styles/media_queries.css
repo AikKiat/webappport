@@ -1,6 +1,29 @@
 
+@media all and (max-width:1081px){
 
-@media all and (max-width: 1024px) and (orientation:portrait){ 
+    .my__skills__grid{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+    }
+    
+    .hero__heading{
+        font-size: 2.5rem;
+    }
+
+    .dynamic__texts li{
+        font-size: 2.2rem;
+    }
+}
+
+
+
+@media all and (max-width: 1024px){ 
+
+    .my__skills__grid{
+        display: grid;
+        grid-template-columns:repeat(5,1fr);
+    }
+
     .dynamic__texts li{
         list-style: none;
         font-size:2rem;
@@ -62,19 +85,10 @@
 
 @media all and (max-width:768px) and (orientation:portrait){
 
-    
-    .contact__me__button__holder{
-        position: absolute;
-        top: 6%;
+    .contact__me__section{
         left: 15%;
-        width: 3rem;
-        height: 3rem;
-    }
-
-    .contact__window{
-        left: 20%;
-        width: 60%; 
-        height: 100%;
+        top: 8%;
+        width: 63%;
     }
 
     .contact__form h2{
@@ -212,14 +226,9 @@
 
 @media all and (max-width: 425px) and (orientation:portrait){
 
-    .contact__me__button{
-        font-size: 200%;  
-    }
-
-    .contact__window{
-        left: 10%;
-        width: 80%; 
-        height: 100%;
+    .contact__me__button__holder{
+        width: 3rem;
+        height: 3rem; 
     }
 
     .my__skills__grid{
@@ -814,17 +823,6 @@
         padding: 0.5rem;
         gap: 0.5rem;
 
-    }
-}
-
-@media all and (max-width:1081px) and (orientation:portrait){
-    
-    .hero__heading{
-        font-size: 2.5rem;
-    }
-
-    .dynamic__texts li{
-        font-size: 2.2rem;
     }
 }
 

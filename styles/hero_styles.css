@@ -37,10 +37,19 @@
   inherits: false;
 }
 
+
+.contact__me__section{
+    position: absolute;
+    top: 5%;
+    left: 22%;
+    width: 40%; 
+    height: 100%;
+}
+
 .contact__me__button__holder{
     position: absolute;
-    top: 10%;
-    left: 22%;
+    top: 0%;
+    left: 0%;
     width: 4rem;
     height: 4rem;
 }
@@ -53,9 +62,7 @@
     left: 0%;
     height: 100%;
     width: 100%;
-    font-size: 300%;
     background:transparent;
-    color: #ffcece;
     border-radius: 50%;
     border: 2px solid #131313;
     box-shadow: 0 0px 1rem #ffffb9;
@@ -63,12 +70,20 @@
     animation: squishAlertButton 2.0s linear infinite;
 }
 
+#mail__icon{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+}
+
 .flash{
     opacity: 0;
     position: absolute;
     left: 0%;
     top: 0%;
-    background:#10c0e8;
+    background:#e81058;
     width: 100%;
     height: 100%;
     filter: blur(1rem);
@@ -84,10 +99,10 @@
         box-shadow: none;
     }
     10%{
-        box-shadow: 0 0 5rem #10c0e8, 0 0 5rem #10c0e8, 0 0 5rem #10c0e8;
+        box-shadow: 0 0 5rem #e81058, 0 0 5rem #e81058, 0 0 5rem #e81058;
     }
     33%{
-        box-shadow: 0 0 5rem #10c0e8, 0 0 1rem #10c0e8, 0 0 7rem #10c0e8;
+        box-shadow: 0 0 5rem #e81058, 0 0 1rem #e81058, 0 3 7rem #e81058;
     }
     100%{
         background-color: transparent;
@@ -125,24 +140,59 @@
 .contact__window{
     z-index: -1;
     position: absolute;
-    left:30%;
-    top: 0%;
-    width: 40%; 
-    height: 80%;
+    left:5%;
+    top: 3%;
+    width: 100%;
+    height: 100%;
 }
 
 #progress__bar{
+    z-index: 1;
     position: absolute;
     top: 0%;
     left: 0%;
-    height: 0.5rem;
+    height: 0.4rem;
     width: 1%;
-    background: #10c0e8;
+    background: #e81058;
     opacity: 0;
+    border-radius: 50%;
+    filter: blur(0.1rem);
+}
+
+#progress__bar::after{
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    content: "";
+    background: #e8e110;
+    filter: blur(0.1rem);
+    width: 1rem;
+    height: 0.5rem;
+    animation: progressBarGlowEdge 0.7s linear infinite;
+}
+
+
+@keyframes progressBarGlowEdge{
+    0%{
+        filter: blur(0.15rem);
+    }
+    30%{
+        box-shadow: 0 0 0.5rem #d2e810, 0 0 2rem  #d2e810, 0 0 5rem  #d2e810;
+    }
+    40%{
+        box-shadow: 0 0 0.5rem  #d2e810, 0 0 3rem  #d2e810, 0 0 3rem  #d2e810;
+    }
+    50%{
+        box-shadow: 0 0 0.5rem  #d2e810, 0 0 1rem  #d2e810, 0 0 3rem  #d2e810;
+    }
+    100%{
+        filter: blur(0.2rem);
+    }
 }
 
 .animate__progress__bar{
-    animation: extendWidth 0.7s linear forwards;
+    animation: extendWidth 3s ease-in-out forwards;
 }
 
 .animate__scroll__effect{

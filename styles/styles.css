@@ -621,15 +621,29 @@ html, body {
     left: 20%;
     height: 60%;
     width: 60%;
-    background:#ffffffe1;
+    background:#ffffff29;
     border: 0.2rem dashed #131313;
     display: flex;
     flex-direction: column;
     padding: 0;
     overflow-y: auto;
     align-items: center;
+    backdrop-filter: blur(1.0rem);
 
     box-shadow: 0 0 0.9rem 0.2rem #009cff, inset 0 0 0.9rem 0.2rem #009cff;
+}
+
+.skills__section::after{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width: 90%;
+    height: 90%;
+    background: #fffff3;
+    filter: blur(10rem);
+
 }
 
 .skills__section #top__content{
@@ -654,17 +668,50 @@ html, body {
     margin: 0.3rem;
 }
 
+.skill__tooltip{
+    z-index: -2;
+    text-align: center;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    padding: 0.3rem;
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+    background: #131313;
+    color: #d6f7a3;
+    border-radius: 30%;
+    visibility: hidden;
+}
+
+.icon__holder{
+    width: 80%;
+    height: 100%;
+}
+
+.icon__holder:hover .skill__tooltip{
+    z-index: 1;
+    visibility: visible;
+}
+
+#REST__API__tooltip{
+    font-size: 0.8rem;
+}
+
+#android__studio__tooltip{
+    font-size: 0.6931rem;
+}
 
 
 #posgressql{
     width: 5rem;
 }
+
 .my__skills__grid{
     position: absolute;
     top: 10%;
-    left: 0;
+    left: 0%;
     width: fit-content;
     height: fit-content;
     display: grid;
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns:repeat(6,1fr);
 }
