@@ -554,7 +554,7 @@ function deSpawnContactMeButton(){
     
     contactMeButton.style.opacity = 0;
     contactMeButton.style.zIndex = -1;
-    flash.style.opacity =1;
+    flash.style.opacity =0;
     flash.classList.add("animate__flash");
     flash.style.animationPlayState = "running";
     setTimeout(() => {;
