@@ -76,7 +76,7 @@ function typewriter(introText, text, textCaret, typingSpeed, introString, step){
 
 
 //add dynamic autotyping text function
-dynamicTexts = ["I am Aik Kiat, SUTD CSD", "Software Engineering", "Frontend Dev, Aspiring Fullstack", "AI-Applications Enthusiast"];
+dynamicTexts = ["I am Aik Kiat, SUTD CSD", "Software Engineering", "Fullstack Developer", "AI-Applications Enthusiast"];
 const autotypeTextUl = document.querySelector(".dynamic__texts");
 const heroTextCaret = "<span class='hero__caret' id='caret'></span>"; //caretElement
 
