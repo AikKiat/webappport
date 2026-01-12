@@ -373,8 +373,8 @@ detecting the type of recyclable using an existing model. The prediction results
 into the ESP32 to drive the hardware components in different ways to sort the different types of recyclables.`
 
 
-videoLinks = {"smartHealth":"https://www.youtube.com/embed/L9Ba1HxGkM4?si=xgpkq_-eoTMfbB5q", "popKids":"https://www.youtube.com/embed/BSN1rSyl0B4?si=Q2FH8AzupTnvPD36", 
-    "fred": "https://www.youtube.com/embed/oVhxidlmAhY?si=fD7OIAYSqiQlSckN", "mathMassacre":"https://www.youtube.com/embed/adQkJX5DadU?si=-48adIf1l1DBiVgI",
+videoLinks = {"smartHealth":"https://www.youtube.com/embed/L9Ba1HxGkM4?si=xgpkq_-eoTMfbB5q", "popKids":"https://www.youtube.com/embed/BSN1rSyl0B4?si=9SvAC6qGmmXRdUNS", 
+    "fred": "https://www.youtube.com/embed/oVhxidlmAhY?si=fD7OIAYSqiQlSckN", "mathMassacre":"https://www.youtube.com/embed/uuqprdwbSsk?si=-OMQqeWbsPSx7F4N",
     "nlpNews": "https://www.youtube.com/embed/5yQdkhj2GSM?si=E2srlXCG-6ffiaan", "greenLoop":"images/project_images/hacking2.jpg", "placeholder":"#"}
 
 gitHubLinks = {"smartHealth":"https://github.com/ItsMeOX/SmartHealth", "popKids":"https://github.com/AikKiat/Pools-of-Possibilities-FIsh-Flock-Simulation-and-Motion-Gesture-Detection-in-Blender", 
